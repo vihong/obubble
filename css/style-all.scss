@@ -34,6 +34,53 @@ $screen: 1300px;
   }
 }
 
+@mixin responsive($media) {
+  //----------------- Apple devices -----------------//
+  @if $media == iphoneSE {
+    @media (min-width: 320px) /*and (min-height: 568px) */ {
+      @content;
+    }
+  } @else if $media == iphone6 {
+    @media (min-width: 375px) /*and (min-height: 667px) */ {
+      @content;
+    }
+  } @else if $media == iphone6plus {
+    @media (min-width: 414px) /*and (min-height: 736px) */ {
+      @content;
+    }
+  } @else if $media == iphoneX {
+    @media (min-width: 375px) and (min-height: 812px) {
+      @content;
+    }
+  } @else if $media == iPad {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+
+  //----------------- Android devices -----------------//
+  @else if $media == galaxyS5 {
+    @media (min-width: 350px) and (min-height: 640px) {
+      @content;
+    }
+
+    //----------------- Other devices -----------------//
+
+  } @else if $media == desktop {
+    @media (min-width: 968px) {
+      @content;
+    }
+  } @else if $media == tvScreen {
+    @media (min-width: 1300px) {
+      @content;
+    }
+  }
+  // @else if $media == ios {
+  //   @media (min-width: 768px) and (min-height: 1024px) { @content; }
+  //   @media (min-width: 320px) and (min-height: 480px) { @content; }
+  // }
+}
+
 //---------------------  GLOBAL  ---------------------//
 
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,800&display=swap');
@@ -110,7 +157,7 @@ img {
     height: auto;
     margin: 20px 10px;
 
-    @include ipadResp {
+    @include responsive(iPad) {
       width: 10%;
     }
   }
@@ -165,3 +212,7 @@ img {
     transition-delay: 0.4s;
   }
 }
+
+// .navbar {
+//   background: none;
+// }

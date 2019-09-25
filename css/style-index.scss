@@ -13,38 +13,50 @@ $iPad: 768px;
 $desktop: 1024px;
 $screen: 1300px;
 
-
 @function color($color-name) {
   @return map-get($colors, $color-name);
 }
 
 @mixin responsive($media) {
- //----------------- Apple devices -----------------//  
- @if $media == iphoneSE {    
-    @media (min-width: 320px) and (min-height: 568px)  { @content; }
-  }
-  @else if $media == iphone6 {
-    @media (min-width: 375px) and (min-height: 667px)  { @content; }
-  }
-  @else if $media == iphone6plus {
-    @media (min-width: 414px) and (min-height: 736px) { @content; }
-  }
-  @else if $media == iphoneX {
-    @media (min-width: 375px) and (min-height: 812px) { @content; }
-  }
-  @else if $media == iPad {
-    @media (min-width: 768px) and (min-height: 1024px) { @content; }
+  //----------------- Apple devices -----------------//
+  @if $media == iphoneSE {
+    @media (min-width: 320px) /*and (min-height: 568px) */ {
+      @content;
+    }
+  } @else if $media == iphone6 {
+    @media (min-width: 375px) /*and (min-height: 667px) */ {
+      @content;
+    }
+  } @else if $media == iphone6plus {
+    @media (min-width: 414px) /*and (min-height: 736px) */ {
+      @content;
+    }
+  } @else if $media == iphoneX {
+    @media (min-width: 375px) and (min-height: 812px) {
+      @content;
+    }
+  } @else if $media == iPad {
+    @media (min-width: 768px) {
+      @content;
+    }
   }
 
-   //----------------- Android devices -----------------// 
-   @else if $media == galaxyS5 {
-    @media (min-width: 350px) and (min-height: 640px)  { @content; }
-  }
-  @else if $media == desktop {
-    @media (min-width: 968) and (min-height: 1024px) { @content; }
-  }
-  @else if $media == tvScreen {
-    @media (min-width: 1300px) { @content; }
+  //----------------- Android devices -----------------//
+  @else if $media == galaxyS5 {
+    @media (min-width: 350px) and (min-height: 640px) {
+      @content;
+    }
+
+    //----------------- Other devices -----------------//
+
+  } @else if $media == desktop {
+    @media (min-width: 968px) {
+      @content;
+    }
+  } @else if $media == tvScreen {
+    @media (min-width: 1300px) {
+      @content;
+    }
   }
   // @else if $media == ios {
   //   @media (min-width: 768px) and (min-height: 1024px) { @content; }
@@ -52,37 +64,9 @@ $screen: 1300px;
   // }
 }
 
-@mixin iPhone6-Resp {
-  @media (min-width: #{$iphone6})  {
-    @content;
-  }
-}
-
-@mixin iPhoneX-Resp {
-  @media (min-width: #{$iphone6}) and (min-height: #{$iphoneX-height}){
-    @content;
-  }
-}
-
-@mixin iPhone6plus-Resp {
-  @media (min-width: #{$iphone6plus}) {
-    @content;
-  }
-}
-
-@mixin desktopResp {
-  @media (min-width: #{$desktop}) {
-    @content;
-  }
-}
-
-@mixin screenResp {
-  @media (min-width: #{$screen}) {
-    @content;
-  }
-}
 
 //---------------------  SHOWCASE / CAROUSEL (1/2) ---------------------//
+
 
 .crsl-bg {
   height: 94vh;
@@ -91,38 +75,40 @@ $screen: 1300px;
   background-position: center right -10px;
   object-fit: cover;
   background-size: cover;
-  background-repeat: no-repeat;
+  // background-repeat: no-repeat;
   text-align: center;
-  @include responsive(iPad){
+  @include responsive(iPad) {
     margin-top: 4vh;
     height: 96vh;
   }
-  .header_text { //Votre Salon Bubble Tea à Montmartre
+  .header_text {
+    //Votre Salon Bubble Tea à Montmartre
     font-size: 1rem;
     position: relative;
     top: -31rem; //pourcentage does not work, have to use rem
     width: 140%;
     right: 20%; //prend un pourcentage de la page (plus visuel et responsive)
-    @include responsive(iphone6){
+    @include responsive(iphone6) {
       top: -37rem;
       font-size: 1.2rem;
     }
-    @include responsive(galaxyS5){
-      top : -37rem;
+    @include responsive(galaxyS5) {
+      top: -37rem;
     }
-    @include responsive(iphone6plus){
-      top : -43rem;
+    @include responsive(iphone6plus) {
+      top: -43rem;
       font-size: 1.3rem;
     }
-    @include responsive(iphoneX){
+    @include responsive(iphoneX) {
       top: -50rem;
     }
-    
-    @include responsive(iPad){
+
+    @include responsive(iPad) {
       top: -58rem;
       font-size: 2rem;
     }
-    h1 { //produits de qualité
+    h1 {
+      //produits de qualité
       color: #fff;
       font-size: 2.4em;
       margin-top: 2em;
@@ -131,9 +117,9 @@ $screen: 1300px;
       margin-bottom: 0;
 
       @include responsive(iPad) {
-        font-size: 3em;
+        font-size: 2.5em;
         position: relative;
-        bottom :10px;
+        bottom: 10px;
       }
 
       @include responsive(desktop) {
@@ -167,12 +153,12 @@ $screen: 1300px;
       border-radius: 15px;
       text-transform: uppercase;
       margin-top: 10px;
-      @include responsive(iphoneX){
+      @include responsive(iphoneX) {
         margin-top: 20px;
         font-size: 1.5em;
       }
       @include responsive(iPad) {
-        font-size: 1.3em;
+        font-size: 1.2em;
         position: relative;
         bottom: 10px;
       }
@@ -254,7 +240,7 @@ $screen: 1300px;
   text-transform: uppercase;
   padding-top: 1rem;
 
-  @include desktopResp {
+  @include responsive(desktop) {
     padding: 15px;
   }
   .box {
@@ -288,3 +274,15 @@ $screen: 1300px;
     margin-top: -30px;
   }
 }
+
+html body {
+  @include responsive(desktop) {
+    display: none;
+  }
+}
+
+
+// .navbar { //pour rendre la nav transparent
+//   background: none;
+//   border: none;
+// }

@@ -6,11 +6,10 @@
   -o-object-fit: cover;
      object-fit: cover;
   background-size: cover;
-  background-repeat: no-repeat;
   text-align: center;
 }
 
-@media (min-width: 768px) and (min-height: 1024px) {
+@media (min-width: 768px) {
   .crsl-bg {
     margin-top: 4vh;
     height: 96vh;
@@ -25,7 +24,7 @@
   right: 20%;
 }
 
-@media (min-width: 375px) and (min-height: 667px) {
+@media (min-width: 375px) {
   .crsl-bg .header_text {
     top: -37rem;
     font-size: 1.2rem;
@@ -38,7 +37,7 @@
   }
 }
 
-@media (min-width: 414px) and (min-height: 736px) {
+@media (min-width: 414px) {
   .crsl-bg .header_text {
     top: -43rem;
     font-size: 1.3rem;
@@ -51,7 +50,7 @@
   }
 }
 
-@media (min-width: 768px) and (min-height: 1024px) {
+@media (min-width: 768px) {
   .crsl-bg .header_text {
     top: -58rem;
     font-size: 2rem;
@@ -66,15 +65,15 @@
   margin-bottom: 0;
 }
 
-@media (min-width: 768px) and (min-height: 1024px) {
+@media (min-width: 768px) {
   .crsl-bg .header_text h1 {
-    font-size: 3em;
+    font-size: 2.5em;
     position: relative;
     bottom: 10px;
   }
 }
 
-@media (min-width: 968) and (min-height: 1024px) {
+@media (min-width: 968px) {
   .crsl-bg .header_text h1 {
     font-size: 3em;
     position: relative;
@@ -120,15 +119,15 @@
   }
 }
 
-@media (min-width: 768px) and (min-height: 1024px) {
+@media (min-width: 768px) {
   .crsl-bg .header_text a {
-    font-size: 1.3em;
+    font-size: 1.2em;
     position: relative;
     bottom: 10px;
   }
 }
 
-@media (min-width: 968) and (min-height: 1024px) {
+@media (min-width: 968px) {
   .crsl-bg .header_text a {
     bottom: 55px;
   }
@@ -197,7 +196,7 @@
   padding-top: 1rem;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 968px) {
   .boxes {
     padding: 15px;
   }
@@ -226,7 +225,7 @@
   font-weight: 550;
 }
 
-@media (min-width: 768px) and (min-height: 1024px) {
+@media (min-width: 768px) {
   .boxes .box .textInTheBox {
     font-size: 2.8rem;
     bottom: 10%;
@@ -236,5 +235,11 @@
 
 .boxes .row {
   margin-top: -30px;
+}
+
+@media (min-width: 968px) {
+  html body {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style-index.css.map */
