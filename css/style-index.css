@@ -32,6 +32,12 @@
   }
 }
 
+@media (min-width: 350px) and (min-height: 640px) {
+  .crsl-bg .header_text {
+    top: -37rem;
+  }
+}
+
 @media (min-width: 414px) and (min-height: 736px) {
   .crsl-bg .header_text {
     top: -43rem;
