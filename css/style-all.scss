@@ -1,0 +1,167 @@
+$colors: (
+  primary: #deae3c,
+  secondary : #28272C,
+  sky-blue : #91C9DC
+);
+
+/* GLOBAL */
+
+$padding-img: 12px; //why not give percentage but pixels ?
+$borders: 15px;
+$margin: 25px;
+$ipad: 768px;
+$desktop: 1024px;
+$screen: 1300px;
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+@mixin ipadResp {
+  @media (min-width: #{$ipad}) {
+    @content;
+  }
+}
+@mixin desktopResp {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin screenResp {
+  @media (min-width: #{$screen}) {
+    @content;
+  }
+}
+
+//---------------------  GLOBAL  ---------------------//
+
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,800&display=swap');
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  font-family: "Nunito", sans-serif;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+//---------
+/* HEADER NAV */
+.header {
+  // NAV BAR
+  .header_bar {
+    .logo-obubble {
+      height: 30px;
+      width: auto;
+      padding: 0;
+      position: relative;
+      bottom: 5px;
+    }
+    .logo-obubble-text {
+      padding-left: 4px;
+
+      @include ipadResp {
+        padding-left: 15px;
+        font-size: 1.3em;
+      }
+    }
+    @include ipadResp {
+      div ul {
+        font-size: 1.3em;
+      }
+    }
+    .navbar-collapse {
+      text-align: center;
+      ul li a {
+        color:#fff;
+      }
+      ul li a:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+
+/* FOOTER */
+.footer {
+  background-color: #28272C;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  margin-top: 4rem;
+  h3 {
+    font-size: 1.7rem;
+    font-weight: 500;
+  }
+  .icon { //social media icons
+    width: 15%;
+    height: auto;
+    margin: 20px 10px;
+
+    @include ipadResp {
+      width: 10%;
+    }
+  }
+  .glyphicon { //arrow pointup upwards
+    font-size: 20px; 
+    margin-top: 20px;
+    color: color(sky-blue);
+    height: 4rem; //retire ça et hoover le desktop et tu verras pourquoi c'est important de le rajouter
+
+  }
+  .glyphicon:hover {
+    font-size: 33px;
+  }
+}
+.opening_hours {
+  h2 {
+    font-size: 1.7rem;
+    font-weight: bolder;
+  }
+}
+.copyrights {
+  margin: 20px auto;
+}
+
+
+
+[class*="reveal-"] {
+  // opacity: 0;
+  transform: translateY(30px);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 1.4s cubic-bezier(0.59, 0, 0.02, 0.99);
+}
+
+@include desktopResp {
+  .reveal-2 {
+    transition-delay: 0.15s;
+  }
+
+  .reveal-3 {
+    transition-delay: 0.2s;
+  }
+
+  .reveal-4 {
+    transition-delay: 0.3s;
+  }
+
+  .reveal-5 {
+    transition-delay: 0.4s;
+  }
+}

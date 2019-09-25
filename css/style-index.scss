@@ -1,0 +1,280 @@
+//---------------------  PALETTE  ---------------------//
+$colors: (
+  primary: #deae3c
+);
+
+$padding-img: 12px; //why not give percentage but pixels ?
+$borders: 15px;
+$margin: 25px;
+$iphone6: 375px;
+$iphone6plus: 414px;
+$iphoneX-height: 812px;
+$iPad: 768px;
+$desktop: 1024px;
+$screen: 1300px;
+
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+@mixin responsive($media) {
+  @if $media == iphoneSE {
+    @media (min-width: 320px) and (min-height: 568px)  { @content; }
+  }
+  @else if $media == iphone6 {
+    @media (min-width: 375px) and (min-height: 667px)  { @content; }
+  }
+  @else if $media == iphone6plus {
+    @media (min-width: 414px) and (min-height: 736px) { @content; }
+  }
+  @else if $media == iphoneX {
+    @media (min-width: 375px) and (min-height: 812px) { @content; }
+  }
+  @else if $media == iPad {
+    @media (min-width: 768px) and (min-height: 1024px) { @content; }
+  }
+  @else if $media == desktop {
+    @media (min-width: 968) and (min-height: 1024px) { @content; }
+  }
+  @else if $media == tvScreen {
+    @media (min-width: 1300px) { @content; }
+  }
+  // @else if $media == ios {
+  //   @media (min-width: 768px) and (min-height: 1024px) { @content; }
+  //   @media (min-width: 320px) and (min-height: 480px) { @content; }
+  // }
+}
+
+@mixin iPhone6-Resp {
+  @media (min-width: #{$iphone6})  {
+    @content;
+  }
+}
+
+@mixin iPhoneX-Resp {
+  @media (min-width: #{$iphone6}) and (min-height: #{$iphoneX-height}){
+    @content;
+  }
+}
+
+@mixin iPhone6plus-Resp {
+  @media (min-width: #{$iphone6plus}) {
+    @content;
+  }
+}
+
+@mixin desktopResp {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin screenResp {
+  @media (min-width: #{$screen}) {
+    @content;
+  }
+}
+
+//---------------------  SHOWCASE / CAROUSEL (1/2) ---------------------//
+
+.crsl-bg {
+  height: 94vh;
+  border: solid 1px black;
+  margin-top: 6vh;
+  background-position: center right -10px;
+  object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  @include responsive(iPad){
+    margin-top: 4vh;
+    height: 96vh;
+  }
+  .header_text { //Votre Salon Bubble Tea à Montmartre
+    font-size: 1rem;
+    position: relative;
+    top: -31rem; //pourcentage does not work, have to use rem
+    width: 140%;
+    right: 20%; //prend un pourcentage de la page (plus visuel et responsive)
+    @include responsive(iphone6){
+      top: -37rem;
+      font-size: 1.2rem;
+    }
+    @include responsive(iphone6plus){
+      top : -43rem;
+      font-size: 1.3rem;
+    }
+    @include responsive(iphoneX){
+      top: -50rem;
+    }
+    @include responsive(iPad){
+      top: -58rem;
+      font-size: 2rem;
+    }
+    h1 { //produits de qualité
+      color: #fff;
+      font-size: 2.4em;
+      margin-top: 2em;
+      // font-style: italic;
+      margin-top: 2.2em;
+      margin-bottom: 0;
+
+      @include responsive(iPad) {
+        font-size: 3em;
+        position: relative;
+        bottom :10px;
+      }
+
+      @include responsive(desktop) {
+        font-size: 3em;
+        position: relative;
+        bottom: 60px;
+        br {
+          display: none;
+        }
+      }
+      @include responsive(tvScreen) {
+        font-size: 4em;
+        position: relative;
+        bottom: 60px;
+        br {
+          display: none;
+        }
+      }
+    }
+    h2 {
+      font-size: 1.5em;
+    }
+    span {
+      text-decoration: underline;
+    }
+    a {
+      //button "VOIR MENU"
+      font-size: 1.2em;
+      border: 1px solid color(primary);
+      color: color(primary);
+      border-radius: 15px;
+      text-transform: uppercase;
+      margin-top: 10px;
+      @include responsive(iphoneX){
+        margin-top: 20px;
+        font-size: 1.5em;
+      }
+      @include responsive(iPad) {
+        font-size: 1.3em;
+        position: relative;
+        bottom: 10px;
+      }
+      @include responsive(desktop) {
+        bottom: 55px;
+      }
+
+      @include responsive(tvScreen) {
+        font-size: 1.7em;
+        position: relative;
+        bottom: 50px;
+      }
+    }
+  }
+}
+
+.crsl-bg1 {
+  background-image: url(../img-obubble/bbt-showcase-with-logos.jpg);
+  transition: 0.05s ease-in;
+}
+
+.crsl-bg2 {
+  background-image: url(../img-obubble/bbt-showcase-with-burger.jpg);
+}
+
+.crsl-bg3 {
+  background-image: url(../img-obubble/bbt-showcase-with-cheesecake.jpg);
+}
+
+.carousel-fade .carousel-inner {
+  .item {
+    opacity: 0;
+    transition-property: opacity;
+  }
+
+  .active {
+    opacity: 0.1;
+  }
+}
+
+@media all and (transform-3d), (-webkit-transform-3d) {
+  .carousel-fade .carousel-inner > .item.next,
+  .carousel-fade .carousel-inner > .item.active.right {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  .carousel-fade .carousel-inner > .item.prev,
+  .carousel-fade .carousel-inner > .item.active.left {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  .carousel-fade .carousel-inner > .item.next.left,
+  .carousel-fade .carousel-inner > .item.prev.right,
+  .carousel-fade .carousel-inner > .item.active {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+//---------------------  BOXES (2/2) ---------------------//
+.boxes {
+  background-color: white;
+  position: relative;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  padding-top: 1rem;
+
+  @include desktopResp {
+    padding: 15px;
+  }
+  .box {
+    background-color: white;
+    padding: $padding-img;
+    img {
+      border: 1px solid rgba(0, 0, 0, 0.5);
+    }
+    a img:hover {
+      filter: opacity(90%);
+    }
+    .textInTheBox {
+      position: absolute;
+      color: black;
+      top: 15%;
+      left: 10%;
+      font-size: 1.5rem;
+      font-weight: 550;
+
+      @include responsive(iPad) {
+        font-size: 2.8rem;
+        bottom: 10%;
+        left: 10%;
+      }
+    }
+  }
+}
+
+.boxes {
+  .row {
+    margin-top: -30px;
+  }
+}

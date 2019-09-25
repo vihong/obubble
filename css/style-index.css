@@ -1,0 +1,234 @@
+.crsl-bg {
+  height: 94vh;
+  border: solid 1px black;
+  margin-top: 6vh;
+  background-position: center right -10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+@media (min-width: 768px) and (min-height: 1024px) {
+  .crsl-bg {
+    margin-top: 4vh;
+    height: 96vh;
+  }
+}
+
+.crsl-bg .header_text {
+  font-size: 1rem;
+  position: relative;
+  top: -31rem;
+  width: 140%;
+  right: 20%;
+}
+
+@media (min-width: 375px) and (min-height: 667px) {
+  .crsl-bg .header_text {
+    top: -37rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 414px) and (min-height: 736px) {
+  .crsl-bg .header_text {
+    top: -43rem;
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 375px) and (min-height: 812px) {
+  .crsl-bg .header_text {
+    top: -50rem;
+  }
+}
+
+@media (min-width: 768px) and (min-height: 1024px) {
+  .crsl-bg .header_text {
+    top: -58rem;
+    font-size: 2rem;
+  }
+}
+
+.crsl-bg .header_text h1 {
+  color: #fff;
+  font-size: 2.4em;
+  margin-top: 2em;
+  margin-top: 2.2em;
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) and (min-height: 1024px) {
+  .crsl-bg .header_text h1 {
+    font-size: 3em;
+    position: relative;
+    bottom: 10px;
+  }
+}
+
+@media (min-width: 968) and (min-height: 1024px) {
+  .crsl-bg .header_text h1 {
+    font-size: 3em;
+    position: relative;
+    bottom: 60px;
+  }
+  .crsl-bg .header_text h1 br {
+    display: none;
+  }
+}
+
+@media (min-width: 1300px) {
+  .crsl-bg .header_text h1 {
+    font-size: 4em;
+    position: relative;
+    bottom: 60px;
+  }
+  .crsl-bg .header_text h1 br {
+    display: none;
+  }
+}
+
+.crsl-bg .header_text h2 {
+  font-size: 1.5em;
+}
+
+.crsl-bg .header_text span {
+  text-decoration: underline;
+}
+
+.crsl-bg .header_text a {
+  font-size: 1.2em;
+  border: 1px solid #deae3c;
+  color: #deae3c;
+  border-radius: 15px;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+@media (min-width: 375px) and (min-height: 812px) {
+  .crsl-bg .header_text a {
+    margin-top: 20px;
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 768px) and (min-height: 1024px) {
+  .crsl-bg .header_text a {
+    font-size: 1.3em;
+    position: relative;
+    bottom: 10px;
+  }
+}
+
+@media (min-width: 968) and (min-height: 1024px) {
+  .crsl-bg .header_text a {
+    bottom: 55px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .crsl-bg .header_text a {
+    font-size: 1.7em;
+    position: relative;
+    bottom: 50px;
+  }
+}
+
+.crsl-bg1 {
+  background-image: url(../img-obubble/bbt-showcase-with-logos.jpg);
+  -webkit-transition: 0.05s ease-in;
+  transition: 0.05s ease-in;
+}
+
+.crsl-bg2 {
+  background-image: url(../img-obubble/bbt-showcase-with-burger.jpg);
+}
+
+.crsl-bg3 {
+  background-image: url(../img-obubble/bbt-showcase-with-cheesecake.jpg);
+}
+
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .active {
+  opacity: 0.1;
+}
+
+@media all and (transform-3d), (-webkit-transform-3d) {
+  .carousel-fade .carousel-inner > .item.next,
+  .carousel-fade .carousel-inner > .item.active.right {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  .carousel-fade .carousel-inner > .item.prev,
+  .carousel-fade .carousel-inner > .item.active.left {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  .carousel-fade .carousel-inner > .item.next.left,
+  .carousel-fade .carousel-inner > .item.prev.right,
+  .carousel-fade .carousel-inner > .item.active {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.boxes {
+  background-color: white;
+  position: relative;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  padding-top: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .boxes {
+    padding: 15px;
+  }
+}
+
+.boxes .box {
+  background-color: white;
+  padding: 12px;
+}
+
+.boxes .box img {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.boxes .box a img:hover {
+  -webkit-filter: opacity(90%);
+          filter: opacity(90%);
+}
+
+.boxes .box .textInTheBox {
+  position: absolute;
+  color: black;
+  top: 15%;
+  left: 10%;
+  font-size: 1.5rem;
+  font-weight: 550;
+}
+
+@media (min-width: 768px) and (min-height: 1024px) {
+  .boxes .box .textInTheBox {
+    font-size: 2.8rem;
+    bottom: 10%;
+    left: 10%;
+  }
+}
+
+.boxes .row {
+  margin-top: -30px;
+}
+/*# sourceMappingURL=style-index.css.map */

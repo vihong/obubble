@@ -1,0 +1,138 @@
+/* GLOBAL */
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,800&display=swap");
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  font-family: "Nunito", sans-serif;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* HEADER NAV */
+.header .header_bar .logo-obubble {
+  height: 30px;
+  width: auto;
+  padding: 0;
+  position: relative;
+  bottom: 5px;
+}
+
+.header .header_bar .logo-obubble-text {
+  padding-left: 4px;
+}
+
+@media (min-width: 768px) {
+  .header .header_bar .logo-obubble-text {
+    padding-left: 15px;
+    font-size: 1.3em;
+  }
+}
+
+@media (min-width: 768px) {
+  .header .header_bar div ul {
+    font-size: 1.3em;
+  }
+}
+
+.header .header_bar .navbar-collapse {
+  text-align: center;
+}
+
+.header .header_bar .navbar-collapse ul li a {
+  color: #fff;
+}
+
+.header .header_bar .navbar-collapse ul li a:hover {
+  color: #fff;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #28272C;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  margin-top: 4rem;
+}
+
+.footer h3 {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.footer .icon {
+  width: 15%;
+  height: auto;
+  margin: 20px 10px;
+}
+
+@media (min-width: 768px) {
+  .footer .icon {
+    width: 10%;
+  }
+}
+
+.footer .glyphicon {
+  font-size: 20px;
+  margin-top: 20px;
+  color: #91C9DC;
+  height: 4rem;
+}
+
+.footer .glyphicon:hover {
+  font-size: 33px;
+}
+
+.opening_hours h2 {
+  font-size: 1.7rem;
+  font-weight: bolder;
+}
+
+.copyrights {
+  margin: 20px auto;
+}
+
+[class*="reveal-"] {
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+}
+
+.reveal-visible {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: 1.4s cubic-bezier(0.59, 0, 0.02, 0.99);
+  transition: 1.4s cubic-bezier(0.59, 0, 0.02, 0.99);
+}
+
+@media (min-width: 1024px) {
+  .reveal-2 {
+    -webkit-transition-delay: 0.15s;
+            transition-delay: 0.15s;
+  }
+  .reveal-3 {
+    -webkit-transition-delay: 0.2s;
+            transition-delay: 0.2s;
+  }
+  .reveal-4 {
+    -webkit-transition-delay: 0.3s;
+            transition-delay: 0.3s;
+  }
+  .reveal-5 {
+    -webkit-transition-delay: 0.4s;
+            transition-delay: 0.4s;
+  }
+}
+/*# sourceMappingURL=style-all.css.map */
