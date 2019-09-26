@@ -1,24 +1,76 @@
 html, body {
   background-color: #273041;
-  z-index: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3))), url(../img-obubble/ardoise-bleue.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.3)), url(../img-obubble/ardoise-bleue.jpg);
 }
 
-.menu {
-  background-image: url(../img-obubble/ardoise-bleue.jpg);
-  background-repeat: repeat;
-  background-attachment: fixed;
-  margin-top: 9vh;
-  height: 96vh;
-  opacity: 0.9;
-  z-index: -1;
+.category {
+  border: 1px solid white;
+  margin: 0 10px -1px;
 }
 
-.menu .test {
-  color: black;
-  text-align: center;
+.category .title img {
+  width: 15%;
+  display: inline-block;
 }
 
-.footer {
-  margin-top: 0;
+.category .title h1 {
+  color: white;
+  padding-left: 0px;
+  display: inline-block;
+  font-size: 1.3em;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #ffc001;
+}
+
+.category .title span {
+  float: right;
+  color: white;
+  position: relative;
+  top: 1.3em;
+  right: 1.3em;
+}
+
+#bubbleTea .title h1 {
+  color: #5B98DE;
+}
+
+#bubbleTea .title img {
+  width: 13%;
+  padding-bottom: 1em;
+  position: relative;
+  left: 0.2em;
+  margin-right: 0.4em;
+}
+
+.formules-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.formules-content h2 {
+  color: lightgrey;
+  font-size: 1.3em;
+}
+
+.bubbleTea-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.bubbleTea-content h2 {
+  color: lightgrey;
+  font-size: 1.3em;
+}
+
+.closed {
+  display: none;
 }
 /*# sourceMappingURL=style-menu.css.map */

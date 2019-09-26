@@ -191,11 +191,11 @@ $screen: 1300px;
 .carousel-fade .carousel-inner {
   .item {
     opacity: 0;
-    transition-property: opacity;
+    // transition-property: opacity;
   }
 
   .active {
-    opacity: 0.1;
+    opacity: 1;
   }
 }
 
@@ -207,7 +207,7 @@ $screen: 1300px;
     -moz-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
     -o-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(1, 1, 1);
   }
 
   .carousel-fade .carousel-inner > .item.prev,

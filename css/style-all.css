@@ -95,9 +95,10 @@ img {
   font-size: 33px;
 }
 
-.opening_hours h2 {
-  font-size: 1.7rem;
-  font-weight: bolder;
+.opening_hours .phone {
+  color: #91C9DC;
+  -webkit-text-decoration-style: none;
+          text-decoration-style: none;
 }
 
 .copyrights {
