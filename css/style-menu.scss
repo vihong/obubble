@@ -104,6 +104,8 @@ html, body {
 //     margin-top: 0;
 // }
 
+
+
 .category {
   border: 1px solid white;
   margin: 0 10px -1px;
@@ -127,11 +129,15 @@ html, body {
       color: white;
       position: relative;
       top: 1.3em;
-      right: 1.3em;
+      right: 1.1em;
     }
   }
 }
 
+
+//--------------------- CATEGORY TITLES ---------------------//
+
+//way smarter here below to specify the general .category class template by adding an #id to each one of them.
 
 #bubbleTea .title {
     h1 {
@@ -146,6 +152,51 @@ html, body {
     }
 }
 
+#smoothies .title {
+    h1 {
+        color: #DD7FD2;
+    }
+    img {
+        width: 13%;
+        padding-bottom: 1em;
+        position: relative;
+        left: 0.2em;
+        margin-right: 0.4em;;
+    }
+}
+
+#chauds .title {
+    h1 {
+        color: #DD5353;
+    }
+    img {
+        width: 13%;
+        padding-bottom: 1em;
+        position: relative;
+        left: 0.2em;
+        margin-right: 0.4em;;
+    }
+}
+
+#manger .title {
+    h1 {
+        color: #FEAD3A;
+        position: relative;
+        left : 1rem;
+
+    }
+    img {
+        width: 10%;
+        padding-bottom: 1em;
+        position: relative;
+        left: 0.7em;
+        margin-right: 0.4em;;
+    }
+}
+
+
+//--------------------- CATEGORY CONTENT ---------------------//
+
 .formules-content {
   display: flex;
   justify-content: space-around;
@@ -156,6 +207,33 @@ html, body {
 }
 
 .bubbleTea-content {
+  display: flex;
+  justify-content: space-around;
+  h2 {
+    color: lightgrey;
+    font-size: 1.3em;
+  }
+}
+
+.smoothies-content {
+  display: flex;
+  justify-content: space-around;
+  h2 {
+    color: lightgrey;
+    font-size: 1.3em;
+  }
+}
+
+.chauds-content {
+  display: flex;
+  justify-content: space-around;
+  h2 {
+    color: lightgrey;
+    font-size: 1.3em;
+  }
+}
+
+.manger-content {
   display: flex;
   justify-content: space-around;
   h2 {
