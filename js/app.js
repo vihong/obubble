@@ -21,7 +21,45 @@ const openBubbleTea = () => {
     });
 }
 
+const openSmoothies = () => {
+    const smoothies = document.querySelector('#smoothies');
+    const smoothiesContent = document.querySelector('.smoothies-content');
+    console.log(smoothies);
+    console.log(smoothiesContent);
+
+    smoothies.addEventListener('click', () => {
+        smoothiesContent.classList.toggle('closed');
+    });
+}
+
+const openChauds = () => {
+    const chauds = document.querySelector('#chauds');
+    const chaudsContent = document.querySelector('.chauds-content');
+    console.log(chauds);
+    console.log(chaudsContent);
+
+    chauds.addEventListener('click', () => {
+        chaudsContent.classList.toggle('closed');
+    });
+}
+
+const openManger = () => {
+    const manger = document.querySelector('#manger');
+    const mangerContent = document.querySelector('.manger-content');
+    console.log(manger);
+    console.log(mangerContent);
+
+    manger.addEventListener('click', () => {
+        mangerContent.classList.toggle('closed');
+    });
+}
+
+
 openFormules();
 openBubbleTea();
+openSmoothies();
+openChauds();
+openManger();
+
 
 
