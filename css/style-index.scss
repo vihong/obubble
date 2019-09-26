@@ -191,7 +191,7 @@ $screen: 1300px;
 .carousel-fade .carousel-inner {
   .item {
     opacity: 0;
-    // transition-property: opacity;
+    transition-property: opacity;
   }
 
   .active {
