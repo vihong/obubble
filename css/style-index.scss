@@ -69,6 +69,9 @@ $screen: 1300px;
 
 html {
   padding-top : 8vh;
+  @include responsive(iphone6){
+    padding-top: 5vh;
+  }
 }
 
 .crsl-bg {
