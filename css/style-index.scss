@@ -67,19 +67,21 @@ $screen: 1300px;
 
 //---------------------  SHOWCASE / CAROUSEL (1/2) ---------------------//
 
+html {
+  padding-top : 8vh;
+}
 
 .crsl-bg {
-  height: 94vh;
+  // height: 94vh; //à privilégier sur chrome mobile emulator
+  height: 100vh; //à privilégier sur vrai mobile 
+  // margin-top: 6vh;
   border: solid 1px black;
-  margin-top: 6vh;
   background-position: center right -10px;
   object-fit: cover;
   background-size: cover;
-  // background-repeat: no-repeat;
   text-align: center;
   @include responsive(iPad) {
     margin-top: 4vh;
-    height: 96vh;
   }
   .header_text {
     //Votre Salon Bubble Tea à Montmartre
@@ -111,9 +113,8 @@ $screen: 1300px;
       //produits de qualité
       color: #fff;
       font-size: 2.4em;
-      margin-top: 2em;
       // font-style: italic;
-      margin-top: 2.2em;
+      // margin-top: 2.2em;
       margin-bottom: 0;
 
       @include responsive(iPad) {

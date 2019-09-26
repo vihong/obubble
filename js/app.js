@@ -60,6 +60,3 @@ openBubbleTea();
 openSmoothies();
 openChauds();
 openManger();
-
-
-

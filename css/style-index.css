@@ -1,7 +1,10 @@
+html {
+  padding-top: 8vh;
+}
+
 .crsl-bg {
-  height: 94vh;
+  height: 100vh;
   border: solid 1px black;
-  margin-top: 6vh;
   background-position: center right -10px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -12,7 +15,6 @@
 @media (min-width: 768px) {
   .crsl-bg {
     margin-top: 4vh;
-    height: 96vh;
   }
 }
 
@@ -60,8 +62,6 @@
 .crsl-bg .header_text h1 {
   color: #fff;
   font-size: 2.4em;
-  margin-top: 2em;
-  margin-top: 2.2em;
   margin-bottom: 0;
 }
 
