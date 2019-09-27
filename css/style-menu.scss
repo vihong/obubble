@@ -208,7 +208,7 @@ body {
   margin-bottom: 2em;
   hr {
     border-top: 1px dashed color(dashed-color);
-    width: 80%;
+    width: 90%;
     padding-top: 0.5em;
   }
   h1 {
@@ -227,9 +227,13 @@ body {
 .bubbleTea-content {
   display: flex;
   justify-content: space-around;
-  h2 {
-    color: lightgrey;
-    font-size: 1.3em;
+  margin-bottom: 1em;
+  img {
+    width: 100%;
+    display: block;
+    margin: auto;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
   }
 }
 

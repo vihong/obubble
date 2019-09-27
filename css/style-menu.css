@@ -115,7 +115,7 @@ body {
 
 .formules-content hr {
   border-top: 1px dashed #9f9a8d;
-  width: 80%;
+  width: 90%;
   padding-top: 0.5em;
 }
 
@@ -138,11 +138,15 @@ body {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  margin-bottom: 1em;
 }
 
-.bubbleTea-content h2 {
-  color: lightgrey;
-  font-size: 1.3em;
+.bubbleTea-content img {
+  width: 100%;
+  display: block;
+  margin: auto;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 
 .smoothies-content {
