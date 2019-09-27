@@ -257,9 +257,18 @@ body {
 .chauds-content {
   display: flex;
   justify-content: space-around;
+  margin-top: 1em;
+  margin-bottom: 1em;
   h2 {
     color: lightgrey;
     font-size: 1.3em;
+  }
+  img {
+    width: 100%;
+    display: block;
+    margin: auto;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
   }
 }
 

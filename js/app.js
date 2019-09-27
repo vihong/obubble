@@ -1,8 +1,8 @@
 const openFormules = () => {
     const formules = document.querySelector('#formules');
     const formulesContent = document.querySelector('.formules-content');
-    console.log(formules);
-    console.log(formulesContent);
+    // console.log(formules);
+    // console.log(formulesContent);
 
     formules.addEventListener('click', () => {
         formulesContent.classList.toggle('closed');
@@ -13,8 +13,6 @@ const openFormules = () => {
 const openBubbleTea = () => {
     const bubbleTea = document.querySelector('#bubbleTea');
     const bubbleTeaContent = document.querySelector('.bubbleTea-content');
-    console.log(bubbleTea);
-    console.log(bubbleTeaContent);
 
     bubbleTea.addEventListener('click', () => {
         bubbleTeaContent.classList.toggle('closed');
@@ -24,8 +22,6 @@ const openBubbleTea = () => {
 const openSmoothies = () => {
     const smoothies = document.querySelector('#smoothies');
     const smoothiesContent = document.querySelector('.smoothies-content');
-    console.log(smoothies);
-    console.log(smoothiesContent);
 
     smoothies.addEventListener('click', () => {
         smoothiesContent.classList.toggle('closed');
