@@ -155,11 +155,20 @@ body {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  margin-bottom: 1em;
 }
 
 .smoothies-content h2 {
   color: lightgrey;
   font-size: 1.3em;
+}
+
+.smoothies-content img {
+  width: 100%;
+  display: block;
+  margin: auto;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 
 .chauds-content {
