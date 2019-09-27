@@ -1,7 +1,6 @@
-html, body {
+html,
+body {
   background-color: #273041;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3))), url(../img-obubble/ardoise-bleue.jpg);
-  background: linear-gradient(rgba(0, 0, 0, 0.3)), url(../img-obubble/ardoise-bleue.jpg);
 }
 
 .category {
@@ -33,7 +32,7 @@ html, body {
 }
 
 #bubbleTea .title h1 {
-  color: #5B98DE;
+  color: #5b98de;
 }
 
 #bubbleTea .title img {
@@ -46,7 +45,7 @@ html, body {
 }
 
 #smoothies .title .smoothies-only {
-  color: #DD7FD2;
+  color: #dd7fd2;
 }
 
 @media (min-width: 375px) {
@@ -56,7 +55,7 @@ html, body {
 }
 
 #smoothies .title .smoothies-and-milkshakes {
-  color: #DD7FD2;
+  color: #dd7fd2;
   display: none;
 }
 
@@ -76,7 +75,7 @@ html, body {
 }
 
 #chauds .title h1 {
-  color: #DD5353;
+  color: #dd5353;
 }
 
 #chauds .title img {
@@ -88,7 +87,7 @@ html, body {
 }
 
 #manger .title h1 {
-  color: #FEAD3A;
+  color: #fead3a;
   position: relative;
   left: 1rem;
 }
@@ -105,13 +104,32 @@ html, body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  margin-bottom: 2em;
 }
 
-.formules-content h2 {
-  color: lightgrey;
-  font-size: 1.3em;
+.formules-content hr {
+  border-top: 1px dashed #9f9a8d;
+  width: 80%;
+  padding-top: 0.5em;
+}
+
+.formules-content h1 {
+  color: #ffc001;
+  font-size: 1.2em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.formules-content img {
+  width: 60%;
+  display: block;
+  margin: auto;
 }
 
 .bubbleTea-content {
