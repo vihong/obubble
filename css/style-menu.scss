@@ -68,7 +68,10 @@ $screen: 1300px;
 html,
 body {
   background-color: #273041;
-  // background: linear-gradient( rgba(0, 0, 0, 0.3)), url(../img-obubble/ardoise-bleue.jpg);
+  background: linear-gradient( rgba(0, 0, 0, 0.3)), url(../img-obubble/ardoise-bleue.jpg);
+  @include responsive(iPad) {
+    display: none;
+  }
 }
 
 // .menu{

@@ -1,6 +1,15 @@
 html,
 body {
   background-color: #273041;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3))), url(../img-obubble/ardoise-bleue.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.3)), url(../img-obubble/ardoise-bleue.jpg);
+}
+
+@media (min-width: 768px) {
+  html,
+  body {
+    display: none;
+  }
 }
 
 .category {

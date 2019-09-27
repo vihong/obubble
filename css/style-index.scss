@@ -72,6 +72,9 @@ html {
   @include responsive(iphone6){
     padding-top: 5vh;
   }
+  @include responsive(iPad) {
+    display: none;
+  }
 }
 
 .crsl-bg {
@@ -278,13 +281,6 @@ html {
     margin-top: -30px;
   }
 }
-
-html body {
-  @include responsive(desktop) {
-    display: none;
-  }
-}
-
 
 // .navbar { //pour rendre la nav transparent
 //   background: none;

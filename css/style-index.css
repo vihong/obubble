@@ -8,6 +8,12 @@ html {
   }
 }
 
+@media (min-width: 768px) {
+  html {
+    display: none;
+  }
+}
+
 .crsl-bg {
   height: 100vh;
   border: solid 1px black;
@@ -241,11 +247,5 @@ html {
 
 .boxes .row {
   margin-top: -30px;
-}
-
-@media (min-width: 968px) {
-  html body {
-    display: none;
-  }
 }
 /*# sourceMappingURL=style-index.css.map */
