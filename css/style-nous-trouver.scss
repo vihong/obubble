@@ -1,0 +1,150 @@
+//---------------------  PALETTE  ---------------------//
+$colors: (
+  primary: #deae3c,
+  formules-color: #ffc001,
+  dashed-color: #9f9a8d
+);
+
+$padding-img: 12px; //why not give percentage but pixels ?
+$borders: 15px;
+$margin: 25px;
+$iphone6: 375px;
+$iphone6plus: 414px;
+$iphoneX-height: 812px;
+$iPad: 768px;
+$desktop: 1024px;
+$screen: 1300px;
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+@mixin responsive($media) {
+  //----------------- Apple devices -----------------//
+  @if $media == iphoneSE {
+    @media (min-width: 320px) /*and (min-height: 568px) */ {
+      @content;
+    }
+  } @else if $media == iphone6 {
+    @media (min-width: 375px) /*and (min-height: 667px) */ {
+      @content;
+    }
+  } @else if $media == iphone6plus {
+    @media (min-width: 414px) /*and (min-height: 736px) */ {
+      @content;
+    }
+  } @else if $media == iphoneX {
+    @media (min-width: 375px) and (min-height: 812px) {
+      @content;
+    }
+  } @else if $media == iPad {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+
+  //----------------- Android devices -----------------//
+  @else if $media == galaxyS5 {
+    @media (min-width: 350px) and (min-height: 640px) {
+      @content;
+    }
+
+    //----------------- Other devices -----------------//
+  } @else if $media == desktop {
+    @media (min-width: 968px) {
+      @content;
+    }
+  } @else if $media == tvScreen {
+    @media (min-width: 1300px) {
+      @content;
+    }
+  }
+  // @else if $media == ios {
+  //   @media (min-width: 768px) and (min-height: 1024px) { @content; }
+  //   @media (min-width: 320px) and (min-height: 480px) { @content; }
+  // }
+}
+
+html,
+body {
+  background-color: #273041;
+  background: linear-gradient( rgba(39, 48, 65, 0.5)), url(../img-obubble/ardoise-ms.png);
+  background-size: cover;
+  background-size: 100%;
+  @include responsive(iPad) {
+    display: none;
+  }
+}
+
+.itinary-message {
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  h1 {
+    font-size: 2em;
+  }
+  p {
+    font-size: 2em;
+  }
+  .metroLines {
+    display: inline;
+    margin-right: 1em;
+    margin-left: 1em;
+    img {
+      width: 6%;
+    }
+    p {
+      display: inline;
+      font-size: 1.5em;
+      position: relative;
+      top: 2px;
+    }
+  }
+}
+
+.itinaryAPI {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  a {
+    //button "VOIR ITINERAIRE"
+    font-size: 1em;
+    border: 1px solid color(primary);
+    color: #fff;
+    background-color: #ffc001;
+    border-radius: 15px;
+    text-transform: uppercase;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+  }
+}
+
+.aboutUs {
+  background-color: rgb(241, 233, 233);
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  h1 {
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+  p {
+    .boldText{
+        font-weight: bold;
+        text-decoration: none;
+    }
+    span {
+      text-decoration: underline;
+    }
+  }
+  #my-slider{
+      margin-top: 1em;
+      margin-bottom: 1em;
+  }
+}
+
+.footer {
+  margin-top: 0;
+}

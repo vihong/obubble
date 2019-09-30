@@ -1,0 +1,100 @@
+html,
+body {
+  background-color: #273041;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(39, 48, 65, 0.5))), url(../img-obubble/ardoise-ms.png);
+  background: linear-gradient(rgba(39, 48, 65, 0.5)), url(../img-obubble/ardoise-ms.png);
+  background-size: cover;
+  background-size: 100%;
+}
+
+@media (min-width: 768px) {
+  html,
+  body {
+    display: none;
+  }
+}
+
+.itinary-message {
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.itinary-message h1 {
+  font-size: 2em;
+}
+
+.itinary-message p {
+  font-size: 2em;
+}
+
+.itinary-message .metroLines {
+  display: inline;
+  margin-right: 1em;
+  margin-left: 1em;
+}
+
+.itinary-message .metroLines img {
+  width: 6%;
+}
+
+.itinary-message .metroLines p {
+  display: inline;
+  font-size: 1.5em;
+  position: relative;
+  top: 2px;
+}
+
+.itinaryAPI {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.itinaryAPI a {
+  font-size: 1em;
+  border: 1px solid #deae3c;
+  color: #fff;
+  background-color: #ffc001;
+  border-radius: 15px;
+  text-transform: uppercase;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: bold;
+}
+
+.aboutUs {
+  background-color: #f1e9e9;
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.aboutUs h1 {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.aboutUs p .boldText {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.aboutUs p span {
+  text-decoration: underline;
+}
+
+.aboutUs #my-slider {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.footer {
+  margin-top: 0;
+}
+/*# sourceMappingURL=style-nous-trouver.css.map */

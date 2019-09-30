@@ -68,7 +68,9 @@ $screen: 1300px;
 html,
 body {
   background-color: #273041;
-  background: linear-gradient( rgba(0, 0, 0, 0.3)), url(../img-obubble/ardoise-bleue.jpg);
+  background: linear-gradient( rgba(39, 48, 65, 0.5)), url(../img-obubble/ardoise-ms.png);
+  background-size: cover;
+  background-size: 100%;
   @include responsive(iPad) {
     display: none;
   }
@@ -299,3 +301,5 @@ body {
 .footer{
   margin-top: 2em;
 }
+
+//to fix footer position :https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/
