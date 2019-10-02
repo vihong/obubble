@@ -13,6 +13,14 @@
     <link rel="stylesheet" href="css/style-nous-trouver.css">
     <title>Obubble | Bubble Tea Shop</title>
     <link rel="icon" type="image/png" href="./img-obubble/logo-white-bgc-orange.png">
+
+
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body>
@@ -83,7 +91,8 @@
 
             <!-- ITINARY API -->
             <div class="container itinaryAPI">
-                <img src="./img-obubble/box3-googlemap.png" alt="">
+                <div id="map"></div>
+
                 <a href="#" type="btn" class="btn btn-link">Voir itinéraire</a>
             </div>
         </div>
@@ -95,7 +104,7 @@
             <h1>Bienvenue dans notre Salon Bubble Tea</h1>
             <p>Nous sommes 3 cofondateurs<br>
                 <span class="boldText">amoureux</span>
-                 et <span class="boldText">passionnés</span><br>
+                et <span class="boldText">passionnés</span><br>
                 par le savoir-faire maison.
                 Tous les jours, nous exprimons cet amour de la qualité dans nos
                 <span>bubble teas</span>, nos <span>plats faits maison</span> et
@@ -103,56 +112,54 @@
             </p>
         </div>
         <div class="container">
-        <div class="row">
-            <div id="my-slider" class="carousel slide" data-ride="carousel">
+            <div class="row">
+                <div id="my-slider" class="carousel slide" data-ride="carousel">
 
-                <!-- wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active bg-carousel">
-                        <div>
-                            <img src="./img-obubble/ThreeCakes.jpg" alt="">
+                    <!-- wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active bg-carousel">
+                            <div>
+                                <img src="./img-obubble/ThreeCakes.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div>
+                                <img src="./img-obubble/Menu2.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div>
+                                <img src="./img-obubble/Salle4.jpg" alt="">
+                            </div>
                         </div>
                     </div>
-                    <div class="item">
-                        <div>
-                            <img src="./img-obubble/Menu2.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div>
-                            <img src="./img-obubble/Salle4.jpg" alt="">
-                        </div>
-                    </div>
+
+
+                    <!-- controls or next and prev buttons -->
+                    <a class="left carousel-control" href="#my-slider" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#my-slider" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+
+                    <!-- indicators dot nov -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#my-slider" data-slide-to="0" class="active"></li>
+                        <li data-target="#my-slider" data-slide-to="1"></li>
+                        <li data-target="#my-slider" data-slide-to="2"></li>
+                    </ol>
                 </div>
 
+                <!-- </div> -->
 
-                <!-- controls or next and prev buttons -->
-                <a class="left carousel-control" href="#my-slider" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#my-slider" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-
-                <!-- indicators dot nov -->
-                <ol class="carousel-indicators">
-                    <li data-target="#my-slider" data-slide-to="0" class="active"></li>
-                    <li data-target="#my-slider" data-slide-to="1"></li>
-                    <li data-target="#my-slider" data-slide-to="2"></li>
-                </ol>
             </div>
 
-            <!-- </div> -->
-
         </div>
-
-    </div>
     </div>
 
-
-    
 
 
 
@@ -182,8 +189,11 @@
         </div>
     </footer>
 
-    <script src="./js/app.js">
-    </script>
+    <script src="./js/app.js"></script>
+    <script src="./js/googleMap.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdT2Yo8o0kVw9_lpu9BzWClC53h3D4HHM&callback=initMap">
+        </script>
 </body>
 
 </html>
