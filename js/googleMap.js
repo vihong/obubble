@@ -1,62 +1,88 @@
 function initMap() {
-    // The location of Obubble
-    var obubblePosition = { lat: 48.883536, lng: 2.341302 };
-    var moulinRougePosition = { lat: 48.884129, lng: 2.332400 };
-    var montmartrePosition = { lat: 48.886452, lng: 2.343121 };
+            
+    //--------------------- GENERAL ---------------------//
 
-    // The map, centered at obubblePosition
-    var map = new google.maps.Map(
-        document.getElementById('map'), { zoom: 13, center: obubblePosition });
+    
+    //map options
+    const options = {
+        zoom: 13,
+        center: {lat: 48.883536, lng: 2.341302 } //Paris position
+    }
+    
+    //create the new map object
+    const map = new google.maps.Map(document.getElementById('map'), options);
 
 
-    var iconObubble = {
-        url: "../img-obubble/obubble.png", // url
+    //addMarker function
+    function addMarker(props){
+        const marker = new google.maps.Marker({
+        position: props.coords, //custom coordinates
+        map : map, //integrated to what map ?
+        icon: props.iconImage //custom icon
+        });
+
+        if(props.iconImage){
+            marker.setIcon(props.iconImage);
+        }
+
+        if(props.content){
+            const infoWindow = new google.maps.InfoWindow({
+                content: props.content //custom infoWindow
+            });
+
+            marker.addListener('click', function(){
+                infoWindow.open(map, marker);
+            });
+        }
+    }
+
+
+    //--------------------- SPECIFIC ---------------------//
+
+    //custom-icons
+    const iconObubble = {
+        url: "./img-obubble/obubble.png", // url
         scaledSize: new google.maps.Size(30, 30), // scaled size
         origin: new google.maps.Point(0, 0), // origin
         anchor: new google.maps.Point(0, 0) // anchor
     };
-    var iconMoulinRouge = {
-        url: "../img-obubble/moulinRouge.jpeg", // url
+
+    const iconMoulinRouge = {
+        url: "./img-obubble/moulinRouge.jpeg", // url
         scaledSize: new google.maps.Size(30, 30), // scaled size
         origin: new google.maps.Point(0, 0), // origin
         anchor: new google.maps.Point(0, 0) // anchor
     };
-    var iconMontmartre = {
-        url: "../img-obubble/icon-montmartre.png", // url
+
+    const iconMontmartre = {
+        url: "./img-obubble/icon-montmartre.png", // url
         scaledSize: new google.maps.Size(30, 30), // scaled size
         origin: new google.maps.Point(0, 0), // origin
         anchor: new google.maps.Point(0, 0) // anchor
     };
+
+
+    //final array of markers
+    const markers = [
+        {
+        coords:{lat: 48.883536, lng: 2.341302 }, //obubble
+        iconImage: iconObubble,
+        content: '<p>Obubble Shap</p>'
+        },
+        {
+        coords:{lat: 48.884129, lng: 2.332400 }, // moulinRouge
+        iconImage: iconMoulinRouge,
+        content: '<p>Moulin Rouge</p>'                },
+        {
+        coords:{lat: 48.886452, lng: 2.343121 }, // Scoeur
+        iconImage: iconMontmartre,
+        content: '<p>Montmarte</p>'                    }
+    ];
+
+    addMarker(markers[0]);
+    for(let i = 0; i < markers.length;i++){
+        addMarker(markers[i]);
+    }
     
-
-    // The marker, positioned at obubblePosition
-    var marker = new google.maps.Marker({
-        position: obubblePosition,
-        map: map,
-        icon: iconObubble
-    });
-    
-    var marker = new google.maps.Marker({
-        position: moulinRougePosition,
-        map: map,
-        icon: iconMoulinRouge
-    });
-    
-    var marker = new google.maps.Marker({
-        position: montmartrePosition,
-        map: map,
-        icon: iconMontmartre
-    });
-    
-
-
-
-    var infoWindow = new google.maps.InfoWindow({
-        content: '<p>Obubble Shop<p/>'
-    })
-
-    marker.addListener('click', function () {
-        infoWindow.open(map, marker);
-    });
 }
 
