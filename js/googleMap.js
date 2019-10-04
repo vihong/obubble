@@ -10,7 +10,7 @@ function initMap() {
     }
     
     //create the new map object
-    const map = new google.maps.Map(document.getElementById('map'), options);
+    const map = new google.maps.Map(document.getElementById('myMap'), options);
 
 
     //addMarker function
