@@ -71,9 +71,6 @@ body {
   background: linear-gradient( rgba(39, 48, 65, 0.5)), url(../img-obubble/ardoise-ms.png);
   background-size: cover;
   background-size: 100%;
-  @include responsive(iPad) {
-    display: none;
-  }
 }
 
 .category {

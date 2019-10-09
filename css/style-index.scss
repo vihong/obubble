@@ -72,9 +72,6 @@ html {
   @include responsive(iphone6){
     padding-top: 5vh;
   }
-  @include responsive(iPad) {
-    display: none;
-  }
 }
 
 .crsl-bg {
@@ -119,8 +116,6 @@ html {
       //produits de qualité
       color: #fff;
       font-size: 2.4em;
-      // font-style: italic;
-      // margin-top: 2.2em;
       margin-bottom: 0;
 
       @include responsive(iPad) {

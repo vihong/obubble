@@ -8,11 +8,6 @@ html {
   }
 }
 
-@media (min-width: 768px) {
-  html {
-    display: none;
-  }
-}
 
 .crsl-bg {
   height: 100vh;

@@ -7,13 +7,6 @@ body {
   background-size: 100%;
 }
 
-@media (min-width: 768px) {
-  html,
-  body {
-    display: none;
-  }
-}
-
 .category {
   border: 1px solid white;
   margin: 0 10px -1px;
