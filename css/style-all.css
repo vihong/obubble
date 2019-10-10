@@ -4,7 +4,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: white;
+  background-color: lightcoral;
   font-family: "Nunito", sans-serif;
 }
 
@@ -56,9 +56,13 @@ img {
   color: #fff;
 }
 
+.navbar {
+  height: 51px;
+}
+
 /* FOOTER */
 .footer {
-  background-color: #28272C;
+  background-color: #28272c;
   color: white;
   text-align: center;
   font-size: 1.5rem;
@@ -87,7 +91,7 @@ img {
 .footer .glyphicon {
   font-size: 20px;
   margin-top: 20px;
-  color: #91C9DC;
+  color: #91c9dc;
   height: 4rem;
 }
 
@@ -96,7 +100,7 @@ img {
 }
 
 .opening_hours .phone {
-  color: #91C9DC;
+  color: #91c9dc;
   -webkit-text-decoration-style: none;
           text-decoration-style: none;
 }

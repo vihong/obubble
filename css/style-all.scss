@@ -1,7 +1,7 @@
 $colors: (
   primary: #deae3c,
-  secondary : #28272C,
-  sky-blue : #91C9DC
+  secondary: #28272c,
+  sky-blue: #91c9dc
 );
 
 /* GLOBAL */
@@ -65,7 +65,6 @@ $screen: 1300px;
     }
 
     //----------------- Other devices -----------------//
-
   } @else if $media == desktop {
     @media (min-width: 968px) {
       @content;
@@ -83,12 +82,13 @@ $screen: 1300px;
 
 //---------------------  GLOBAL  ---------------------//
 
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,800&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,800&display=swap");
+
 html,
 body {
   margin: 0;
   padding: 0;
-  background-color: white;
+  background-color: lightcoral;
   font-family: "Nunito", sans-serif;
 }
 
@@ -129,7 +129,7 @@ img {
     .navbar-collapse {
       text-align: center;
       ul li a {
-        color:#fff;
+        color: #fff;
       }
       ul li a:hover {
         color: #fff;
@@ -138,9 +138,14 @@ img {
   }
 }
 
+.navbar {
+  height: 51px;
+  // background-color: transparent; //rend la navar complètement transparente
+}
+
 /* FOOTER */
 .footer {
-  background-color: #28272C;
+  background-color: #28272c;
   color: white;
   text-align: center;
   font-size: 1.5rem;
@@ -151,7 +156,8 @@ img {
     font-size: 1.7rem;
     font-weight: 500;
   }
-  .icon { //social media icons
+  .icon {
+    //social media icons
     width: 15%;
     height: auto;
     margin: 20px 10px;
@@ -160,12 +166,12 @@ img {
       width: 10%;
     }
   }
-  .glyphicon { //arrow pointup upwards
-    font-size: 20px; 
+  .glyphicon {
+    //arrow pointup upwards
+    font-size: 20px;
     margin-top: 20px;
     color: color(sky-blue);
     height: 4rem; //retire ça et hoover le desktop et tu verras pourquoi c'est important de le rajouter
-
   }
   .glyphicon:hover {
     font-size: 33px;
@@ -173,15 +179,13 @@ img {
 }
 .opening_hours {
   .phone {
-    color: #91C9DC;
+    color: #91c9dc;
     text-decoration-style: none;
   }
 }
 .copyrights {
   margin: 20px auto;
 }
-
-
 
 [class*="reveal-"] {
   // opacity: 0;
@@ -211,8 +215,4 @@ img {
     transition-delay: 0.4s;
   }
 }
-
-// .navbar {
-//   background: none;
-// }
 

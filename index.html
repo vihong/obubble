@@ -17,8 +17,111 @@
 
 <body>
 
-    
-    <!---------------- HEADER ---------------->
+
+    <div class="point"></div>
+    <!---------------- SHOWCASE ---------------->
+    <div id="showcase">
+
+
+        <!----------------  CAROUSEL ---------------->
+
+        <div id="carousel" class="container-fluid showcase">
+            <div class="row">
+                <!-- <div class="col-sm-12"> -->
+                <div id="my-slider" class="carousel slide carousel-fade" data-ride="carousel" data-interval="2500"
+                    style="border: 1px solid black;">
+
+                    <!-- wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active crsl-bg crsl-bg1">
+                            <div class="carousel-caption">
+                                <div class="header_text">
+                                    <h1>Votre Salon Bubble Tea <br>à Montmartre</h1>
+                                    <h2>Produits de qualité et <span>faits maison</span></h2>
+                                    <a href="menu-obubble.html" type="btn" class="btn btn-link">Voir menu</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item crsl-bg crsl-bg2">
+                            <div class="carousel-caption">
+                                <div class="header_text">
+                                    <h1>Votre Salon Bubble Tea <br>à Montmartre</h1>
+                                    <h2>Produits de qualité et <span>bagels maison</span></h2>
+                                    <a href="menu-obubble.html" type="btn" class="btn btn-link">Voir menu</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item crsl-bg crsl-bg3">
+                            <div class="carousel-caption">
+                                <div class="header_text">
+                                    <h1>Votre Salon Bubble Tea <br>à Montmartre</h1>
+                                    <h2>Produits de qualité et <span>cheesecakes maison</span></h2>
+                                    <a href="menu-obubble.html" type="btn" class="btn btn-link">Voir menu</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- controls or next and prev buttons -->
+                    <a class="left carousel-control" href="#my-slider" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#my-slider" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+
+                    <!-- indicators dot nov -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#my-slider" data-slide-to="0" class="active"></li>
+                        <li data-target="#my-slider" data-slide-to="1"></li>
+                        <li data-target="#my-slider" data-slide-to="2"></li>
+                    </ol>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- End of carousel -->
+
+    </div>
+    <!-- End of showcase -->
+
+
+
+
+
+
+    <!---------------- BOXES ---------------->
+    <main class="boxes">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="box col-md-6 reveal-1">
+                    <a href="menu-obubble.html">
+                        <img src="./img-obubble/box1-bbt.png" alt="menu" class="img-responsive">
+                    </a>
+                    <div class="textInTheBox">menu</div>
+                </div>
+                <div class="box col-md-6 reveal-2">
+                    <a href="https://www.ubereats.com/fr-FR/paris/food-delivery/o-bubble/StGlFBrOTLirTCRKI62tZg/">
+                        <img src="./img-obubble/box2-UberEats.jpg" alt="livraison" class="img-responsive">
+                    </a>
+                    <div class="textInTheBox">livraison</div>
+                </div>
+                <div class="box col-md-4 reveal-3">
+                    <a href="nous-trouver-obubble.html">
+                        <img src="./img-obubble/box3-googlemap.png" alt="nous-trouver" class="img-responsive">
+                    </a>
+                    <div class="textInTheBox">nous trouver</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!----------------  HEADER ---------------->
+    <!-- <div id="header"></div> -->
     <header class="header" id="header">
 
         <!-- NAV BAR -->
@@ -51,106 +154,11 @@
 
     </header>
 
-    <!-- <div class="header_text">
-        <p class="montmartre">Votre Salon Bubble Tea <br>à Montmartre</p>
-        <p class="produit_qualite">Produits de qualité et <span>faits maison</span></p>
-        <a href="menu-obubble.html" type="btn" class="btn btn-link">Voir menu</a>
-    </div> -->
 
 
-    <!---------------- SHOWCASE / CAROUSEL ---------------->
-
-    <div class="container-fluid showcase" >
-        <div class="row">
-            <!-- <div class="col-sm-12"> -->
-            <div id="my-slider" class="carousel slide carousel-fade" data-ride="carousel" data-interval="2500" style="border: 1px solid black; background-image : url(./img-obubble/bbt-showcase-alone.jpg)">
-
-                <!-- wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active crsl-bg crsl-bg1">
-                        <div class="carousel-caption">
-                            <div class="header_text">
-                                <h1>Votre Salon Bubble Tea <br>à Montmartre</h1>
-                                <h2>Produits de qualité et <span>faits maison</span></h2>
-                                <a href="menu-obubble.html" type="btn" class="btn btn-link">Voir menu</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item crsl-bg crsl-bg2">
-                        <div class="carousel-caption">
-                            <div class="header_text">
-                                <h1>Votre Salon Bubble Tea <br>à Montmartre</h1>
-                                <h2>Produits de qualité et <span>bagels maison</span></h2>
-                                <a href="menu-obubble.html" type="btn" class="btn btn-link">Voir menu</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item crsl-bg crsl-bg3">
-                        <div class="carousel-caption">
-                            <div class="header_text">
-                                <h1>Votre Salon Bubble Tea <br>à Montmartre</h1>
-                                <h2>Produits de qualité et <span>cheesecakes maison</span></h2>
-                                <a href="menu-obubble.html" type="btn" class="btn btn-link">Voir menu</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- controls or next and prev buttons -->
-                <a class="left carousel-control" href="#my-slider" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#my-slider" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-
-                <!-- indicators dot nov -->
-                <ol class="carousel-indicators">
-                    <li data-target="#my-slider" data-slide-to="0" class="active"></li>
-                    <li data-target="#my-slider" data-slide-to="1"></li>
-                    <li data-target="#my-slider" data-slide-to="2"></li>
-                </ol>
-            </div>
-
-            <!-- </div> -->
-
-        </div>
-
-    </div>
-    <!---------------- BOXES ---------------->
-    <main class="boxes">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="box col-md-6 reveal-1">
-                    <a href="menu-obubble.html">
-                        <img src="./img-obubble/box1-bbt.png" alt="menu" class="img-responsive">
-                        <!-- mettre l paragraphe en blanc ou noir et en z-index position -->
-                    </a>
-                    <div class="textInTheBox">menu</div>
-                </div>
-                <div class="box col-md-6 reveal-2">
-                    <a href="https://www.ubereats.com/fr-FR/paris/food-delivery/o-bubble/StGlFBrOTLirTCRKI62tZg/">
-                        <img src="./img-obubble/box2-UberEats.jpg" alt="livraison" class="img-responsive">
-                    </a>
-                    <div class="textInTheBox">livraison</div>
-                </div>
-                <div class="box col-md-4 reveal-3">
-                    <a href="nous-trouver-obubble.html">
-                        <img src="./img-obubble/box3-googlemap.png" alt="nous-trouver" class="img-responsive">
-                    </a>
-                    <div class="textInTheBox">nous trouver</div>
-                </div>
-            </div>
-        </div>
-    </main>
-    <!-- FOOTER -->
+    <!----------------  FOOTER ---------------->
+    <!-- <div id="footer"></div> -->
     <footer class="footer">
-        <!-- <a href="#header">
-            <span class="glyphicon glyphicon-chevron-up"></span>
-        </a> -->
         <div class="container">
             <div>
                 <a href="https://www.facebook.com/obubble/">
@@ -172,7 +180,6 @@
         </div>
     </footer>
 
-    <!-- <script src="./js/reveal.js"></script> -->
     <script src="./js/app.js"></script>
 </body>
 
