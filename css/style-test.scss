@@ -1,0 +1,43 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  // background-color: lightcoral;
+}
+
+img {
+  box-sizing: border-box;
+}
+
+#boxes {
+  background-color: yellow;
+}
+
+.boxes {
+  // background-color: white;
+  position: relative;
+  color: black;
+  text-transform: uppercase;
+  padding: 2em;
+  a img {
+    border: 1px solid gey(108, 100, 100, 0.1);
+  }
+  a img:hover {
+    filter: opacity(90%);
+  }
+  .each-box {
+    background-color: #fff;
+    border: 1px solid black;
+    position: relative;
+    margin: 1em auto;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .text-in-each-box {
+    position: absolute;
+    z-index: 1;
+    top: 10%;
+    left: 5%;
+    font-weight: 600;
+  }
+}

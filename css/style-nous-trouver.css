@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   background-color: #273041;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(39, 48, 65, 0.5))), url(../img-obubble/ardoise-ms.png);
   background: linear-gradient(rgba(39, 48, 65, 0.5)), url(../img-obubble/ardoise-ms.png);
@@ -12,12 +13,30 @@ html, body {
   text-align: center;
 }
 
+@media (min-width: 968px) {
+  .itinary-message {
+    font-size: 1.5rem;
+  }
+}
+
 .itinary-message h1 {
   font-size: 2em;
 }
 
+@media (min-width: 768px) {
+  .itinary-message h1 {
+    font-size: 4em;
+  }
+}
+
 .itinary-message p {
   font-size: 2em;
+}
+
+@media (min-width: 768px) {
+  .itinary-message p {
+    font-size: 3em;
+  }
 }
 
 .itinary-message .metroLines {
@@ -26,8 +45,37 @@ html, body {
   margin-left: 1em;
 }
 
+@media (min-width: 768px) {
+  .itinary-message .metroLines {
+    margin: 2em;
+  }
+}
+
+@media (min-width: 968px) {
+  .itinary-message .metroLines {
+    margin: 3em;
+  }
+}
+
 .itinary-message .metroLines img {
   width: 6%;
+  margin: 1em;
+}
+
+@media (min-width: 768px) {
+  .itinary-message .metroLines img {
+    width: 5%;
+    position: relative;
+    bottom: 2px;
+  }
+}
+
+@media (min-width: 968px) {
+  .itinary-message .metroLines img {
+    width: 4%;
+    position: relative;
+    bottom: 2px;
+  }
 }
 
 .itinary-message .metroLines p {
@@ -37,12 +85,27 @@ html, body {
   top: 2px;
 }
 
-.itinaryAPI {
-  padding-top: 1em;
-  padding-bottom: 1em;
+@media (min-width: 768px) {
+  .itinary-message .metroLines p {
+    font-size: 2.5em;
+  }
 }
 
-.itinaryAPI a, .itinaryAPI a:link, .itinaryAPI a:visited, .itinaryAPI a:hover, .itinaryAPI a:target {
+#myMap {
+  height: 400px;
+  width: 100%;
+}
+
+.itinaryAPI {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.itinaryAPI a,
+.itinaryAPI a:link,
+.itinaryAPI a:visited,
+.itinaryAPI a:hover,
+.itinaryAPI a:target {
   font-size: 1em;
   border: 1px solid #deae3c;
   color: #fff;
@@ -61,6 +124,16 @@ html, body {
   text-decoration: none;
 }
 
+@media (min-width: 768px) {
+  .itinaryAPI a,
+  .itinaryAPI a:link,
+  .itinaryAPI a:visited,
+  .itinaryAPI a:hover,
+  .itinaryAPI a:target {
+    font-size: 1.5em;
+  }
+}
+
 .aboutUs {
   background-color: #f1e9e9;
   text-align: center;
@@ -73,6 +146,12 @@ html, body {
   font-weight: bold;
 }
 
+@media (min-width: 768px) {
+  .aboutUs h1 {
+    font-size: 2.3em;
+  }
+}
+
 .aboutUs p .boldText {
   font-weight: bold;
   text-decoration: none;
@@ -82,12 +161,24 @@ html, body {
   text-decoration: underline;
 }
 
+@media (min-width: 768px) {
+  .aboutUs p {
+    font-size: 2em;
+    width: 90%;
+    margin: auto;
+    line-height: 150%;
+  }
+}
+
+@media (min-width: 768px) {
+  .aboutUs .container-carousel {
+    width: 90%;
+    margin: 2em auto;
+  }
+}
+
 .aboutUs #my-slider {
   margin-top: 1em;
   margin-bottom: 1em;
-}
-
-.footer {
-  margin-top: 0;
 }
 /*# sourceMappingURL=style-nous-trouver.css.map */

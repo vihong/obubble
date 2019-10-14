@@ -17,25 +17,8 @@ $screen: 1300px;
   @return map-get($colors, $color-name);
 }
 
-@mixin ipadResp {
-  @media (min-width: #{$ipad}) {
-    @content;
-  }
-}
-@mixin desktopResp {
-  @media (min-width: #{$desktop}) {
-    @content;
-  }
-}
-
-@mixin screenResp {
-  @media (min-width: #{$screen}) {
-    @content;
-  }
-}
-
 @mixin responsive($media) {
-  //----------------- Apple devices -----------------//
+  //----------------- Mobiles : until 767px  -----------------//
   @if $media == iphoneSE {
     @media (min-width: 320px) /*and (min-height: 568px) */ {
       @content;
@@ -52,21 +35,27 @@ $screen: 1300px;
     @media (min-width: 375px) and (min-height: 812px) {
       @content;
     }
-  } @else if $media == iPad {
+  } @else if $media == galaxyS5 {
+    @media (min-width: 350px) and (min-height: 640px) {
+      @content;
+    }
+  }
+
+  //----------------- Tablets : from 768px  -----------------//
+  @else if $media == iPad {
     @media (min-width: 768px) {
       @content;
     }
   }
 
-  //----------------- Android devices -----------------//
-  @else if $media == galaxyS5 {
-    @media (min-width: 350px) and (min-height: 640px) {
+  //----------------- Desktop : from 960px -----------------//
+
+  @else if $media == desktop {
+    @media (min-width: 960px) {
       @content;
     }
-
-    //----------------- Other devices -----------------//
-  } @else if $media == desktop {
-    @media (min-width: 968px) {
+  } @else if $media == iPadPro {
+    @media (min-width: 1024px) and (min-height: 1366px) {
       @content;
     }
   } @else if $media == tvScreen {
@@ -74,10 +63,6 @@ $screen: 1300px;
       @content;
     }
   }
-  // @else if $media == ios {
-  //   @media (min-width: 768px) and (min-height: 1024px) { @content; }
-  //   @media (min-width: 320px) and (min-height: 480px) { @content; }
-  // }
 }
 
 //---------------------  GLOBAL  ---------------------//
@@ -88,7 +73,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: lightcoral;
+  // background-color: lightcoral;
   font-family: "Nunito", sans-serif;
 }
 
@@ -101,60 +86,156 @@ img {
   box-sizing: border-box;
 }
 
-//---------
-/* HEADER NAV */
-.header {
-  // NAV BAR
-  .header_bar {
-    .logo-obubble {
-      height: 30px;
-      width: auto;
-      padding: 0;
-      position: relative;
-      bottom: 5px;
-    }
-    .logo-obubble-text {
-      padding-left: 4px;
+.point {
+  height: 51px;
+  @include responsive(desktop) {
+    // height: 1px;
+  }
+}
 
+// .navbar{
+//   background-color: transparent;
+// }
+
+//---------------------  HEADER (1/2)  ---------------------//
+.header {
+  .header_bar {
+    .navbar,
+    .navbar-inverse {
+      @include responsive(iPad) {
+        border: none;
+        height: 8vh;
+        // position: absolute;
+      }
+      @include responsive(desktop) {
+        background-color: transparent; //rend la navar complètement transparente
+        height: 12vh;
+        padding-top: 20px;
+        position: fixed;
+        // z-index: 1;
+      }
+      .logo-obubble {
+        height: 30px;
+        width: auto;
+        padding: 0;
+        position: relative;
+        bottom: 5px;
+        @include responsive(iPad) {
+          height: 40px;
+          top: 7px;
+        }
+        @include responsive(desktop) {
+          // border: 1px solid black;
+          height: 50px;
+          right: 100px;
+        }
+      }
       @include ipadResp {
-        padding-left: 15px;
-        font-size: 1.3em;
+        div ul {
+          font-size: 1.3em;
+        }
       }
-    }
-    @include ipadResp {
-      div ul {
-        font-size: 1.3em;
-      }
-    }
-    .navbar-collapse {
-      text-align: center;
-      ul li a {
-        color: #fff;
-      }
-      ul li a:hover {
-        color: #fff;
+      .navbar-collapse {
+        text-align: center;
+        @include responsive(iPad) {
+          position: relative;
+          top: 20px;
+          padding-right: 20px;
+        }
+        @include responsive(desktop) {
+          padding-right: 0;
+          padding-top: 5px;
+          right: -100px;
+        }
+        ul {
+          li a {
+            font-size: 1.1em;
+            color: #fff;
+            @include responsive(desktop) {
+              margin: auto 20px;
+            }
+          }
+          li a:hover {
+            color: #fff;
+          }
+        }
       }
     }
   }
 }
 
-.navbar {
-  height: 51px;
-  // background-color: transparent; //rend la navar complètement transparente
+//when activated, this id style below keeps the header non-sticky and
+//at the top providing you remove the navbar-fixed-top from the id="navbar".
+// @include responsive(desktop) {
+//   #header {
+//     height: 10vh;
+//     //   background-color: #a6a6a6;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     z-index: 1;
+//   }
+// }
+//but for some reason, this new id style above wouldn't apply, so I created the class
+// to be added right below (see responsive.js) with ".removeStickyFromHeader": 
+
+.removeStickyFromHeader {
+  height: 10vh;
+  //   background-color: #a6a6a6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
 
-/* FOOTER */
+// .navbar {
+//   @include responsive(iPad) {
+//   }
+// }
+//---------------------  FOOTER (2/2) ---------------------//
 .footer {
   background-color: #28272c;
   color: white;
   text-align: center;
   font-size: 1.5rem;
-  padding-top: 2rem;
+  padding-top: 3rem;
   padding-bottom: 3rem;
-  // margin-top: 4rem;
-  h3 {
-    font-size: 1.7rem;
-    font-weight: 500;
+  // padding-top: 5rem;
+  .opening_hours {
+    h3 {
+      font-size: 1.8rem;
+      font-weight: 500;
+      @include responsive(iPad) {
+        font-size: 2.3rem;
+      }
+      @include responsive(desktop) {
+        font-size: 2.6rem;
+      }
+    }
+    p.horairesMobilesTablets {
+      font-size: 1.5rem;
+      @include responsive(iPad) {
+        font-size: 1.7rem;
+        line-height: 180%;
+      }
+      @include responsive(desktop) {
+        display: none;
+      }
+    }
+    .horairesDesktop {
+      display: none;
+      @include responsive(desktop) {
+        display: block;
+        font-size: 1.8rem;
+        line-height: 180%;
+      }
+    }
+    .phone {
+      color: #91c9dc;
+      text-decoration-style: none;
+    }
   }
   .icon {
     //social media icons
@@ -163,7 +244,12 @@ img {
     margin: 20px 10px;
 
     @include responsive(iPad) {
-      width: 10%;
+      width: 9%;
+    }
+    @include responsive(desktop) {
+      width: 5%;
+      margin-left: 3em;
+      margin-right: 3em;
     }
   }
   .glyphicon {
@@ -177,15 +263,12 @@ img {
     font-size: 33px;
   }
 }
-.opening_hours {
-  .phone {
-    color: #91c9dc;
-    text-decoration-style: none;
-  }
-}
+
 .copyrights {
   margin: 20px auto;
 }
+
+//---------------------  EFFETS FADE-IN  ---------------------//
 
 [class*="reveal-"] {
   // opacity: 0;
@@ -215,4 +298,3 @@ img {
     transition-delay: 0.4s;
   }
 }
-

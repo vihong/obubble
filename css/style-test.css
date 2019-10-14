@@ -1,0 +1,48 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#boxes {
+  background-color: yellow;
+}
+
+.boxes {
+  position: relative;
+  color: black;
+  text-transform: uppercase;
+  padding: 2em;
+}
+
+.boxes a img {
+  border: 1px solid gey(108, 100, 100, 0.1);
+}
+
+.boxes a img:hover {
+  -webkit-filter: opacity(90%);
+          filter: opacity(90%);
+}
+
+.boxes .each-box {
+  background-color: #fff;
+  border: 1px solid black;
+  position: relative;
+  margin: 1em auto;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.boxes .text-in-each-box {
+  position: absolute;
+  z-index: 1;
+  top: 10%;
+  left: 5%;
+  font-weight: 600;
+}
+/*# sourceMappingURL=style-test.css.map */

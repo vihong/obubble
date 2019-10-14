@@ -2,7 +2,6 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background-color: #4472c4;
   height: 150vh;
 }
 
@@ -14,20 +13,17 @@ body {
   height: 100vh;
 }
 
+@media (min-width: 960px) {
+  #showcase {
+    background-position: center bottom -65px;
+  }
+}
+
 #carousel {
   height: 90vh;
 }
 
-#header {
-  height: 10vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
 #footer {
-  height: 10vh;
   background-color: lightgreen;
 }
 
@@ -35,54 +31,10 @@ body {
   height: 51px;
 }
 
-.boxes {
-  background-color: white;
-  position: relative;
-  text-align: center;
-  color: white;
-  text-transform: uppercase;
-  padding-top: 1rem;
-}
-
-@media (min-width: 968px) {
-  .boxes {
-    padding: 15px;
-  }
-}
-
-.boxes .box {
-  background-color: white;
-  padding: 12px;
-}
-
-.boxes .box img {
-  border: 1px solid rgba(0, 0, 0, 0.5);
-}
-
-.boxes .box a img:hover {
-  -webkit-filter: opacity(90%);
-          filter: opacity(90%);
-}
-
-.boxes .box .textInTheBox {
-  position: absolute;
-  color: black;
-  top: 15%;
-  left: 10%;
-  font-size: 1.5rem;
-  font-weight: 550;
-}
-
 @media (min-width: 768px) {
-  .boxes .box .textInTheBox {
-    font-size: 2.8rem;
-    bottom: 10%;
-    left: 10%;
+  .point {
+    display: none;
   }
-}
-
-.boxes .row {
-  margin-top: -30px;
 }
 
 .crsl-bg {
@@ -91,6 +43,12 @@ body {
      object-fit: cover;
   background-position: center right;
   background-size: cover;
+}
+
+@media (min-width: 960px) {
+  .crsl-bg {
+    background-position: center bottom -65px;
+  }
 }
 
 .crsl-bg1 {
@@ -175,8 +133,18 @@ body {
 
 @media (min-width: 768px) {
   .header_text {
-    top: -58rem;
-    font-size: 2rem;
+    top: -61rem;
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 960px) {
+  .header_text {
+    top: -25rem;
+    font-size: 1.5rem;
+    text-align: left;
+    position: relative;
+    right: 180px;
   }
 }
 
@@ -194,25 +162,11 @@ body {
   }
 }
 
-@media (min-width: 968px) {
-  .header_text h1 {
-    font-size: 3em;
-    position: relative;
-    bottom: 60px;
-  }
-  .header_text h1 br {
-    display: none;
-  }
-}
-
-@media (min-width: 1300px) {
+@media (min-width: 960px) {
   .header_text h1 {
     font-size: 4em;
+    line-height: 140%;
     position: relative;
-    bottom: 60px;
-  }
-  .header_text h1 br {
-    display: none;
   }
 }
 
@@ -220,8 +174,14 @@ body {
   font-size: 1.5em;
 }
 
-.header_text span {
+.header_text h2 span {
   text-decoration: underline;
+}
+
+@media (min-width: 960px) {
+  .header_text h2 {
+    font-size: 3rem;
+  }
 }
 
 .header_text a {
@@ -242,69 +202,83 @@ body {
 
 @media (min-width: 768px) {
   .header_text a {
-    font-size: 1.2em;
+    font-size: 1.1em;
     position: relative;
     bottom: 10px;
   }
 }
 
-@media (min-width: 968px) {
+@media (min-width: 960px) {
   .header_text a {
-    bottom: 55px;
-  }
-}
-
-@media (min-width: 1300px) {
-  .header_text a {
+    top: 10px;
     font-size: 1.7em;
-    position: relative;
-    bottom: 50px;
+    padding: 1.5rem;
+    font-weight: bold;
   }
 }
 
-.footer {
-  background-color: #28272c;
+.boxes {
+  background-color: white;
+  position: relative;
   color: white;
-  text-align: center;
-  font-size: 1.5rem;
-  padding-top: 2rem;
-  padding-bottom: 3rem;
-}
-
-.footer h3 {
-  font-size: 1.7rem;
-  font-weight: 500;
-}
-
-.footer .icon {
-  width: 15%;
-  height: auto;
-  margin: 20px 10px;
+  text-transform: uppercase;
+  padding-bottom: 4rem;
 }
 
 @media (min-width: 768px) {
-  .footer .icon {
-    width: 10%;
+  .boxes {
+    padding-bottom: 4em;
   }
 }
 
-.footer .glyphicon {
-  font-size: 20px;
-  margin-top: 20px;
-  height: 4rem;
+@media (min-width: 960px) {
+  .boxes {
+    padding: 15px;
+  }
 }
 
-.footer .glyphicon:hover {
-  font-size: 33px;
+.boxes .box {
+  background-color: white;
+  padding: 12px;
 }
 
-.opening_hours .phone {
-  color: #91c9dc;
-  -webkit-text-decoration-style: none;
-          text-decoration-style: none;
+.boxes .box img {
+  border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
-.copyrights {
-  margin: 20px auto;
+.boxes .box a img:hover {
+  -webkit-filter: opacity(90%);
+          filter: opacity(90%);
+}
+
+@media (min-width: 960px) {
+  .boxes .box {
+    position: relative;
+    bottom: 2em;
+  }
+}
+
+.boxes .box .textInTheBox {
+  position: absolute;
+  color: black;
+  top: 15%;
+  left: 10%;
+  font-size: 1.5rem;
+  font-weight: 550;
+}
+
+@media (min-width: 768px) {
+  .boxes .box .textInTheBox {
+    font-size: 2.8rem;
+    bottom: 10%;
+    left: 10%;
+  }
+}
+
+@media (min-width: 960px) {
+  .boxes .box .textInTheBox {
+    font-size: 2.4rem;
+    font-weight: 600;
+  }
 }
 /*# sourceMappingURL=style-index.css.map */

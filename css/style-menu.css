@@ -12,11 +12,6 @@ body {
   margin: 0 10px -1px;
 }
 
-.category .title img {
-  width: 15%;
-  display: inline-block;
-}
-
 .category .title h1 {
   color: white;
   padding-left: 0px;
@@ -27,12 +22,50 @@ body {
   color: #ffc001;
 }
 
+@media (min-width: 768px) {
+  .category .title h1 {
+    font-size: 1.5em;
+  }
+}
+
+.category .title img {
+  width: 15%;
+  display: inline-block;
+}
+
 .category .title span {
   float: right;
   color: white;
   position: relative;
   top: 1.3em;
   right: 1.1em;
+}
+
+@media (min-width: 768px) {
+  .category .title span {
+    font-size: 1.5em;
+    right: 1.8em;
+  }
+}
+
+#formules .title h1 {
+  color: white;
+  padding-left: 0px;
+  display: inline-block;
+  font-size: 1.3em;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #ffc001;
+}
+
+#formules .title img {
+  width: 15%;
+}
+
+@media (min-width: 768px) {
+  #formules .title img {
+    width: 10.5%;
+  }
 }
 
 #bubbleTea .title h1 {
@@ -46,6 +79,12 @@ body {
   left: 0.2em;
   top: 0.3em;
   margin-right: 0.4em;
+}
+
+@media (min-width: 768px) {
+  #bubbleTea .title img {
+    width: 10%;
+  }
 }
 
 #smoothies .title .smoothies-only {
@@ -78,6 +117,12 @@ body {
   margin-right: 0.4em;
 }
 
+@media (min-width: 768px) {
+  #smoothies .title img {
+    width: 10%;
+  }
+}
+
 #chauds .title h1 {
   color: #dd5353;
 }
@@ -88,6 +133,12 @@ body {
   position: relative;
   left: 0.2em;
   margin-right: 0.4em;
+}
+
+@media (min-width: 768px) {
+  #chauds .title img {
+    width: 10%;
+  }
 }
 
 #manger .title h1 {
@@ -104,6 +155,20 @@ body {
   margin-right: 0.4em;
 }
 
+@media (min-width: 768px) {
+  #manger .title img {
+    width: 7%;
+    right: 100px;
+    margin: 7px 10px 7px 7px;
+  }
+}
+
+@media (min-width: 960px) {
+  #manger .title img {
+    margin: 7px 2em 7px 7px;
+  }
+}
+
 .formules-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -117,23 +182,39 @@ body {
   margin-bottom: 2em;
 }
 
-.formules-content hr {
+.formules-content .menuSmall hr {
   border-top: 1px dashed #9f9a8d;
   width: 90%;
   padding-top: 0.5em;
 }
 
-.formules-content h1 {
+.formules-content .menuSmall h1 {
   color: #ffc001;
   font-size: 1.2em;
   text-align: center;
   text-transform: uppercase;
 }
 
-.formules-content img {
+.formules-content .menuSmall img {
   width: 60%;
   display: block;
   margin: auto;
+}
+
+@media (min-width: 768px) {
+  .formules-content .menuSmall {
+    display: none;
+  }
+}
+
+.formules-content .menuLarge {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .formules-content .menuLarge {
+    display: block;
+  }
 }
 
 .bubbleTea-content {
@@ -145,12 +226,28 @@ body {
   margin-bottom: 1em;
 }
 
-.bubbleTea-content img {
+.bubbleTea-content .menuSmall img {
   width: 100%;
   display: block;
   margin: auto;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
+}
+
+@media (min-width: 768px) {
+  .bubbleTea-content .menuSmall {
+    display: none;
+  }
+}
+
+.bubbleTea-content .menuLarge {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .bubbleTea-content .menuLarge {
+    display: block;
+  }
 }
 
 .smoothies-content {
@@ -162,17 +259,33 @@ body {
   margin-bottom: 1em;
 }
 
-.smoothies-content h2 {
+.smoothies-content .menuSmall h2 {
   color: lightgrey;
   font-size: 1.3em;
 }
 
-.smoothies-content img {
+.smoothies-content .menuSmall img {
   width: 100%;
   display: block;
   margin: auto;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
+}
+
+@media (min-width: 768px) {
+  .smoothies-content .menuSmall {
+    display: none;
+  }
+}
+
+.smoothies-content .menuLarge {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .smoothies-content .menuLarge {
+    display: block;
+  }
 }
 
 .chauds-content {
@@ -185,17 +298,33 @@ body {
   margin-bottom: 1em;
 }
 
-.chauds-content h2 {
+.chauds-content .menuSmall h2 {
   color: lightgrey;
   font-size: 1.3em;
 }
 
-.chauds-content img {
+.chauds-content .menuSmall img {
   width: 100%;
   display: block;
   margin: auto;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
+}
+
+@media (min-width: 768px) {
+  .chauds-content .menuSmall {
+    display: none;
+  }
+}
+
+.chauds-content .menuLarge {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .chauds-content .menuLarge {
+    display: block;
+  }
 }
 
 .manger-content {
@@ -208,16 +337,32 @@ body {
   margin-bottom: 1em;
 }
 
-.manger-content h2 {
+.manger-content .menuSmall h2 {
   color: lightgrey;
   font-size: 1.3em;
 }
 
-.manger-content img {
+.manger-content .menuSmall img {
   width: 100%;
   display: block;
   margin: auto;
   padding-bottom: 0.5em;
+}
+
+@media (min-width: 768px) {
+  .manger-content .menuSmall {
+    display: none;
+  }
+}
+
+.manger-content .menuLarge {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .manger-content .menuLarge {
+    display: block;
+  }
 }
 
 .closed {

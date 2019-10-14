@@ -20,7 +20,7 @@ $screen: 1300px;
 }
 
 @mixin responsive($media) {
-  //----------------- Apple devices -----------------//
+  //----------------- Mobiles : until 767px  -----------------//
   @if $media == iphoneSE {
     @media (min-width: 320px) /*and (min-height: 568px) */ {
       @content;
@@ -37,21 +37,27 @@ $screen: 1300px;
     @media (min-width: 375px) and (min-height: 812px) {
       @content;
     }
-  } @else if $media == iPad {
+  } @else if $media == galaxyS5 {
+    @media (min-width: 350px) and (min-height: 640px) {
+      @content;
+    }
+  }
+
+  //----------------- Tablets : from 768px  -----------------//
+  @else if $media == iPad {
     @media (min-width: 768px) {
       @content;
     }
   }
 
-  //----------------- Android devices -----------------//
-  @else if $media == galaxyS5 {
-    @media (min-width: 350px) and (min-height: 640px) {
+  //----------------- Desktop : from 960px -----------------//
+
+  @else if $media == desktop {
+    @media (min-width: 960px) {
       @content;
     }
-
-    //----------------- Other devices -----------------//
-  } @else if $media == desktop {
-    @media (min-width: 968px) {
+  } @else if $media == iPadPro {
+    @media (min-width: 1024px) and (min-height: 1366px) {
       @content;
     }
   } @else if $media == tvScreen {
@@ -59,28 +65,22 @@ $screen: 1300px;
       @content;
     }
   }
-  // @else if $media == ios {
-  //   @media (min-width: 768px) and (min-height: 1024px) { @content; }
-  //   @media (min-width: 320px) and (min-height: 480px) { @content; }
-  // }
 }
 
 html,
 body {
   background-color: #273041;
-  background: linear-gradient( rgba(39, 48, 65, 0.5)), url(../img-obubble/ardoise-ms.png);
+  background: linear-gradient(rgba(39, 48, 65, 0.5)), url(../img-obubble/ardoise-ms.png);
   background-size: cover;
   background-size: 100%;
 }
+
+//--------------------- CATEGORY TEMPLATE ---------------------//
 
 .category {
   border: 1px solid white;
   margin: 0 10px -1px;
   .title {
-    img {
-      width: 15%;
-      display: inline-block;
-    }
     h1 {
       color: white;
       padding-left: 0px;
@@ -90,6 +90,14 @@ body {
       font-weight: 400;
       text-transform: uppercase;
       color: #ffc001;
+      @include responsive(iPad) {
+        font-size: 1.5em;
+      }
+    }
+    img {
+      width: 15%;
+      display: inline-block;
+      // border: 1px solid white;
     }
     span {
       float: right;
@@ -97,13 +105,36 @@ body {
       position: relative;
       top: 1.3em;
       right: 1.1em;
+      @include responsive(iPad) {
+        font-size: 1.5em;
+        right: 1.8em;
+      }
     }
   }
 }
 
 //--------------------- CATEGORY TITLES ---------------------//
 
-//way smarter here below to specify the general .category class template by adding an #id to each one of them.
+//README : way smarter to specify just below the general ".category" class template by adding an #id to each one of them.
+
+#formules .title {
+  h1 {
+    color: white;
+    padding-left: 0px;
+    // border: 1px solid white;
+    display: inline-block;
+    font-size: 1.3em;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #ffc001;
+  }
+  img {
+    width: 15%;
+    @include responsive(iPad) {
+      width: 10.5%;
+    }
+  }
+}
 
 #bubbleTea .title {
   h1 {
@@ -116,6 +147,9 @@ body {
     left: 0.2em;
     top: 0.3em;
     margin-right: 0.4em;
+    @include responsive(iPad) {
+      width: 10%;
+    }
   }
 }
 
@@ -142,6 +176,9 @@ body {
     top: 0.3em;
     left: 0.2em;
     margin-right: 0.4em;
+    @include responsive(iPad) {
+      width: 10%;
+    }
   }
 }
 
@@ -155,6 +192,9 @@ body {
     position: relative;
     left: 0.2em;
     margin-right: 0.4em;
+    @include responsive(iPad) {
+      width: 10%;
+    }
   }
 }
 
@@ -170,6 +210,14 @@ body {
     position: relative;
     left: 0.7em;
     margin-right: 0.4em;
+    @include responsive(iPad) {
+      width: 7%;
+      right: 100px;
+      margin: 7px 10px 7px 7px;
+    }
+    @include responsive(desktop){
+      margin: 7px 2em 7px 7px;
+    }
   }
 }
 
@@ -180,21 +228,32 @@ body {
   flex-direction: column;
   justify-content: space-around;
   margin-bottom: 2em;
-  hr {
-    border-top: 1px dashed color(dashed-color);
-    width: 90%;
-    padding-top: 0.5em;
+  .menuSmall {
+    hr {
+      border-top: 1px dashed color(dashed-color);
+      width: 90%;
+      padding-top: 0.5em;
+    }
+    h1 {
+      color: color(formules-color);
+      font-size: 1.2em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    img {
+      width: 60%;
+      display: block;
+      margin: auto;
+    }
+    @include responsive(iPad) {
+      display: none;
+    }
   }
-  h1 {
-    color: color(formules-color);
-    font-size: 1.2em;
-    text-align: center;
-    text-transform: uppercase;
-  }
-  img {
-    width: 60%;
-    display: block;
-    margin: auto;
+  .menuLarge {
+    display: none;
+    @include responsive(iPad) {
+      display: block;
+    }
   }
 }
 
@@ -202,12 +261,23 @@ body {
   display: flex;
   justify-content: space-around;
   margin-bottom: 1em;
-  img {
-    width: 100%;
-    display: block;
-    margin: auto;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+  .menuSmall {
+    img {
+      width: 100%;
+      display: block;
+      margin: auto;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+    }
+    @include responsive(iPad) {
+      display: none;
+    }
+  }
+  .menuLarge {
+    display: none;
+    @include responsive(iPad) {
+      display: block;
+    }
   }
 }
 
@@ -215,16 +285,27 @@ body {
   display: flex;
   justify-content: space-around;
   margin-bottom: 1em;
-  h2 {
-    color: lightgrey;
-    font-size: 1.3em;
+  .menuSmall {
+    h2 {
+      color: lightgrey;
+      font-size: 1.3em;
+    }
+    img {
+      width: 100%;
+      display: block;
+      margin: auto;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+    }
+    @include responsive(iPad) {
+      display: none;
+    }
   }
-  img {
-    width: 100%;
-    display: block;
-    margin: auto;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+  .menuLarge {
+    display: none;
+    @include responsive(iPad) {
+      display: block;
+    }
   }
 }
 
@@ -233,16 +314,27 @@ body {
   justify-content: space-around;
   margin-top: 1em;
   margin-bottom: 1em;
-  h2 {
-    color: lightgrey;
-    font-size: 1.3em;
+  .menuSmall {
+    h2 {
+      color: lightgrey;
+      font-size: 1.3em;
+    }
+    img {
+      width: 100%;
+      display: block;
+      margin: auto;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+    }
+    @include responsive(iPad) {
+      display: none;
+    }
   }
-  img {
-    width: 100%;
-    display: block;
-    margin: auto;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+  .menuLarge{
+    display: none;
+    @include responsive(iPad) {
+      display: block;
+    }
   }
 }
 
@@ -251,15 +343,26 @@ body {
   justify-content: space-around;
   margin-top: 1em;
   margin-bottom: 1em;
-  h2 {
-    color: lightgrey;
-    font-size: 1.3em;
+  .menuSmall{
+    h2 {
+      color: lightgrey;
+      font-size: 1.3em;
+    }
+    img {
+      width: 100%;
+      display: block;
+      margin: auto;
+      padding-bottom: 0.5em;
+    }
+    @include responsive(iPad) {
+      display: none;
+    }
   }
-  img {
-    width: 100%;
-    display: block;
-    margin: auto;
-    padding-bottom: 0.5em;
+  .menuLarge{
+    display: none;
+    @include responsive(iPad) {
+      display: block;
+    }
   }
 }
 
@@ -267,7 +370,8 @@ body {
   display: none;
 }
 
-.footer{
+//------------------footer -----------------------//
+.footer {
   margin-top: 2em;
 }
 

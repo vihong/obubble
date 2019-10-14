@@ -4,7 +4,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: lightcoral;
+  /* background-color: lightcoral; */
   font-family: "Nunito", sans-serif;
 }
 
@@ -18,8 +18,26 @@ img {
           box-sizing: border-box;
 }
 
-/* HEADER NAV */
-.header .header_bar .logo-obubble {
+.point {
+  height: 51px;
+}
+
+@media (min-width: 768px) {
+  .header .header_bar .navbar {
+    border: none;
+    height: 8vh;
+  }
+}
+
+@media (min-width: 968px) {
+  .header .header_bar .navbar {
+    background-color: transparent;
+    height: 12vh;
+    padding-top: 20px;
+  }
+}
+
+.header .header_bar .navbar .logo-obubble {
   height: 30px;
   width: auto;
   padding: 0;
@@ -27,52 +45,120 @@ img {
   bottom: 5px;
 }
 
-.header .header_bar .logo-obubble-text {
-  padding-left: 4px;
+@media (min-width: 768px) {
+  .header .header_bar .navbar .logo-obubble {
+    height: 40px;
+    top: 7px;
+  }
 }
 
-@media (min-width: 768px) {
-  .header .header_bar .logo-obubble-text {
-    padding-left: 15px;
-    font-size: 1.3em;
+@media (min-width: 968px) {
+  .header .header_bar .navbar .logo-obubble {
+    height: 50px;
+    right: 100px;
   }
 }
 
 @media (min-width: 768px) {
-  .header .header_bar div ul {
+  .header .header_bar .navbar div ul {
     font-size: 1.3em;
   }
 }
 
-.header .header_bar .navbar-collapse {
+.header .header_bar .navbar .navbar-collapse {
   text-align: center;
 }
 
-.header .header_bar .navbar-collapse ul li a {
+@media (min-width: 768px) {
+  .header .header_bar .navbar .navbar-collapse {
+    position: relative;
+    top: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (min-width: 968px) {
+  .header .header_bar .navbar .navbar-collapse {
+    padding-right: 0;
+    padding-top: 5px;
+    right: -100px;
+  }
+}
+
+.header .header_bar .navbar .navbar-collapse ul li a {
+  font-size: 1.1em;
   color: #fff;
 }
 
-.header .header_bar .navbar-collapse ul li a:hover {
+@media (min-width: 968px) {
+  .header .header_bar .navbar .navbar-collapse ul li a {
+    margin: auto 20px;
+  }
+}
+
+.header .header_bar .navbar .navbar-collapse ul li a:hover {
   color: #fff;
 }
 
-.navbar {
-  height: 51px;
-}
-
-/* FOOTER */
 .footer {
   background-color: #28272c;
   color: white;
   text-align: center;
   font-size: 1.5rem;
-  padding-top: 2rem;
+  padding-top: 3rem;
   padding-bottom: 3rem;
 }
 
-.footer h3 {
-  font-size: 1.7rem;
+.footer .opening_hours h3 {
+  font-size: 1.8rem;
   font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .footer .opening_hours h3 {
+    font-size: 2.3rem;
+  }
+}
+
+@media (min-width: 968px) {
+  .footer .opening_hours h3 {
+    font-size: 2.6rem;
+  }
+}
+
+.footer .opening_hours p.horairesMobilesTablets {
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .footer .opening_hours p.horairesMobilesTablets {
+    font-size: 1.7rem;
+    line-height: 180%;
+  }
+}
+
+@media (min-width: 968px) {
+  .footer .opening_hours p.horairesMobilesTablets {
+    display: none;
+  }
+}
+
+.footer .opening_hours .horairesDesktop {
+  display: none;
+}
+
+@media (min-width: 968px) {
+  .footer .opening_hours .horairesDesktop {
+    display: block;
+    font-size: 1.8rem;
+    line-height: 180%;
+  }
+}
+
+.footer .opening_hours .phone {
+  color: #91c9dc;
+  -webkit-text-decoration-style: none;
+          text-decoration-style: none;
 }
 
 .footer .icon {
@@ -83,7 +169,15 @@ img {
 
 @media (min-width: 768px) {
   .footer .icon {
-    width: 10%;
+    width: 9%;
+  }
+}
+
+@media (min-width: 968px) {
+  .footer .icon {
+    width: 5%;
+    margin-left: 3em;
+    margin-right: 3em;
   }
 }
 
@@ -96,12 +190,6 @@ img {
 
 .footer .glyphicon:hover {
   font-size: 33px;
-}
-
-.opening_hours .phone {
-  color: #91c9dc;
-  -webkit-text-decoration-style: none;
-          text-decoration-style: none;
 }
 
 .copyrights {
