@@ -28,6 +28,13 @@ body {
   }
 }
 
+@media (min-width: 960px) {
+  .category .title h1 {
+    font-size: 2em;
+    margin-top: auto;
+  }
+}
+
 .category .title img {
   width: 15%;
   display: inline-block;
@@ -58,18 +65,28 @@ body {
   color: #ffc001;
 }
 
+@media (min-width: 960px) {
+  #formules .title h1 {
+    font-size: 1.8em;
+    position: relative;
+    right: 7px;
+  }
+}
+
 #formules .title img {
   width: 15%;
 }
 
 @media (min-width: 768px) {
   #formules .title img {
-    width: 10.5%;
+    width: 10%;
   }
 }
 
 #bubbleTea .title h1 {
   color: #5b98de;
+  position: relative;
+  left: 10px;
 }
 
 #bubbleTea .title img {
@@ -83,7 +100,7 @@ body {
 
 @media (min-width: 768px) {
   #bubbleTea .title img {
-    width: 10%;
+    width: 8%;
   }
 }
 
@@ -108,6 +125,13 @@ body {
   }
 }
 
+@media (min-width: 768px) {
+  #smoothies .title .smoothies-and-milkshakes {
+    position: relative;
+    left: 10px;
+  }
+}
+
 #smoothies .title img {
   width: 13%;
   padding-bottom: 1em;
@@ -119,12 +143,14 @@ body {
 
 @media (min-width: 768px) {
   #smoothies .title img {
-    width: 10%;
+    width: 8%;
   }
 }
 
 #chauds .title h1 {
   color: #dd5353;
+  position: relative;
+  left: 10px;
 }
 
 #chauds .title img {
@@ -137,7 +163,7 @@ body {
 
 @media (min-width: 768px) {
   #chauds .title img {
-    width: 10%;
+    width: 8%;
   }
 }
 
@@ -145,6 +171,12 @@ body {
   color: #fead3a;
   position: relative;
   left: 1rem;
+}
+
+@media (min-width: 768px) {
+  #manger .title h1 {
+    left: 20px;
+  }
 }
 
 #manger .title img {
@@ -157,15 +189,9 @@ body {
 
 @media (min-width: 768px) {
   #manger .title img {
-    width: 7%;
+    width: 5.5%;
     right: 100px;
-    margin: 7px 10px 7px 7px;
-  }
-}
-
-@media (min-width: 960px) {
-  #manger .title img {
-    margin: 7px 2em 7px 7px;
+    margin: 10px 10px 10px 5px;
   }
 }
 

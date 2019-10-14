@@ -206,6 +206,9 @@ body {
       width: 90%;
       margin: 2em auto;
     }
+    @include responsive(desktop){
+      width: 50%;
+    }
   }
   #my-slider {
     margin-top: 1em;
