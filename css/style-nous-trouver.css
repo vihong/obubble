@@ -101,8 +101,7 @@ body {
   padding-bottom: 2em;
 }
 
-.itinaryAPI a,
-.itinaryAPI a:hover {
+.itinaryAPI a {
   font-size: 1em;
   border: 1px solid #deae3c;
   color: #fff;
@@ -122,12 +121,12 @@ body {
 }
 
 @media (min-width: 768px) {
-  .itinaryAPI a,
-  .itinaryAPI a:hover {
+  .itinaryAPI a {
     font-size: 1.5em;
   }
 }
 
+.itinaryAPI a:hover,
 .itinaryAPI a:focus {
   font-size: 1em;
   border: 1px solid #c69521;
@@ -148,6 +147,7 @@ body {
 }
 
 @media (min-width: 768px) {
+  .itinaryAPI a:hover,
   .itinaryAPI a:focus {
     font-size: 1.5em;
   }

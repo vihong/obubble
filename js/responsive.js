@@ -11,7 +11,7 @@ const removeFixed = () => {
         // $('#point').remove();
     }
     else {
-        navbar.classList.toggle('navbar-fixed-top');
+        navbar.classList.add('navbar-fixed-top');
         header.classList.toggle("removeStickyFromHeader");
     }
     console.log(header);
