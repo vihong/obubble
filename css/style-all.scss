@@ -126,12 +126,12 @@ img {
             top: 7px;
           }
           @include responsive(desktop) {
-            // border: 1px solid black;
             height: 50px;
           }
         }
-        @include responsive(desktop) {
-          // border: 5px solid purple; background-color: lightgreen;
+        @include responsive(iPad) {
+          position: relative;
+          z-index: 3;
         }
       }
       #monMenu {

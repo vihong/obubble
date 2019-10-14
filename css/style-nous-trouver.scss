@@ -170,6 +170,9 @@ body {
     justify-content: center;
     font-weight: bold;
     text-decoration: none;
+    @include responsive(iPad){
+      font-size: 1.5em;
+    }
   }
 }
 

@@ -147,6 +147,12 @@ body {
   text-decoration: none;
 }
 
+@media (min-width: 768px) {
+  .itinaryAPI a:focus {
+    font-size: 1.5em;
+  }
+}
+
 .aboutUs {
   background-color: #f1e9e9;
   text-align: center;
