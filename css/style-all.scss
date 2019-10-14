@@ -135,7 +135,7 @@ img {
           font-size: 1.3em;
         }
       }
-      .navbar-collapse {
+      #monMenu {
         text-align: center;
         @include responsive(iPad) {
           position: relative;
@@ -162,6 +162,10 @@ img {
       }
     }
   }
+}
+
+.nav{
+  margin-right: 0;
 }
 
 //when activated, this id style below keeps the header non-sticky and
