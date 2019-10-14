@@ -289,4 +289,36 @@ body {
     font-weight: 600;
   }
 }
+
+/* ANIMATIONS */
+[class*="reveal-"] {
+  opacity: 0;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+.reveal-visible {
+  opacity: 1;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+}
+
+@media (min-width: 960px) {
+  .reveal-2 {
+    -webkit-transition-delay: 0.15s;
+            transition-delay: 0.15s;
+  }
+  .reveal-3 {
+    -webkit-transition-delay: 0.2s;
+            transition-delay: 0.2s;
+  }
+  .reveal-4 {
+    -webkit-transition-delay: 0.3s;
+            transition-delay: 0.3s;
+  }
+  .reveal-5 {
+    -webkit-transition-delay: 0.4s;
+            transition-delay: 0.4s;
+  }
+}
 /*# sourceMappingURL=style-index.css.map */
