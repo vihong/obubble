@@ -99,6 +99,9 @@ img {
 
 //---------------------  HEADER (1/2)  ---------------------//
 .header {
+  @include responsive(desktop){
+    width: 50%;
+  }
   .header_bar {
     .navbar,
     .navbar-inverse {
@@ -164,9 +167,6 @@ img {
   }
 }
 
-.nav{
-  margin-right: 0;
-}
 
 //when activated, this id style below keeps the header non-sticky and
 //at the top providing you remove the navbar-fixed-top from the id="navbar".
