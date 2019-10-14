@@ -11,18 +11,21 @@
 
     <link rel="stylesheet" href="css/style-all.css">
     <link rel="stylesheet" href="css/style-menu.css">
-    <title>Obubble | Bubble Tea Shop</title>
+    <title>Obubble | Bubble Tea Montmartre</title>
     <link rel="icon" type="image/png" href="./img-obubble/logo-white-bgc-orange.png">
 </head>
 
 <body>
+
+    <div id="point" class="point"></div>
+
 
     <!---------------- HEADER ---------------->
     <header class="header" id="header">
 
         <!-- NAV BAR -->
         <div class="header_bar">
-            <nav class="navbar navbar-inverse navbar-fixed-top">
+            <nav id="navbar" class="navbar navbar-inverse navbar-fixed-top">
                 <div class="container">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#monMenu">
@@ -59,8 +62,8 @@
     </div>
     <div class="container">
         <div class="row">
-            
-            
+
+
             <!-- #FORMULES -->
             <div id="formules" class="category">
                 <div class="title">
@@ -69,20 +72,25 @@
                     <span>&#x25bc;</span>
                 </div>
                 <div class="formules-content closed">
-                    <div>
-                        <hr>
-                        <h1>gouter maison : 8.20€</h2>
-                        <img src="./img-obubble/formulesGouter.png" alt="formulesGouter">
+                    <div class="menuSmall">
+                        <div>
+                            <hr>
+                            <h1>gouter maison : 8.20€</h2>
+                                <img src="./img-obubble/formulesGouter.png" alt="formulesGouter">
+                        </div>
+                        <div>
+                            <hr>
+                            <h1>déjeuner maison : 10.50€</h2>
+                                <img src="./img-obubble/formulesDejeuner.png" alt="formulesDejeuner">
+                        </div>
+                        <div>
+                            <hr>
+                            <h1>gourmand maison : 13.50€</h2>
+                                <img src="./img-obubble/formulesGourmand.png" alt="formulesGourmand">
+                        </div>
                     </div>
-                    <div>
-                        <hr>
-                        <h1>déjeuner maison : 10.50€</h2>
-                        <img src="./img-obubble/formulesDejeuner.png" alt="formulesDejeuner">
-                    </div>
-                    <div>
-                        <hr>
-                        <h1>gourmand maison : 13.50€</h2>
-                        <img src="./img-obubble/formulesGourmand.png" alt="formulesGourmand">
+                    <div class="menuLarge">
+                        <img src="./img-obubble/formulesContentDesktop.png" alt="">
                     </div>
                 </div>
             </div>
@@ -97,15 +105,18 @@
                     <span>&#x25bc;</span>
                 </div>
                 <div class="bubbleTea-content closed">
-                    <div>
+                    <div class="menuSmall">
                         <img src="./img-obubble/bbtPricesMobile.png" alt="bbtPricesMobile">
                         <img src="./img-obubble/bbtFruites.png" alt="bbtFruites">
                         <img src="./img-obubble/bbtLactes.png" alt="bbtLactes">
                     </div>
+                    <div class="menuLarge">
+                        <img src="./img-obubble/bubbleteaDesktop.png" alt="">
+                    </div>
                 </div>
             </div>
-            
-            
+
+
             <!-- #SMOOTHIES & MILKSHAKES -->
             <div id="smoothies" class="category">
                 <div class="title">
@@ -115,10 +126,13 @@
                     <span>&#x25bc;</span>
                 </div>
                 <div class="smoothies-content closed">
-                    <div>
+                    <div class="menuSmall">
                         <img src="./img-obubble/smoohiestPricesMobile.png" alt="smoohiestPricesMobile">
                         <img src="./img-obubble/smoothies.png" alt="smoothies">
                         <img src="./img-obubble/milkshakes.png" alt="milkshakes">
+                    </div>
+                    <div class="menuLarge">
+                        <img src="./img-obubble/smoothiesDesktop.png" alt="">
                     </div>
                 </div>
             </div>
@@ -132,11 +146,15 @@
                     <span>&#x25bc;</span>
                 </div>
                 <div class="chauds-content closed">
-                    <div>
+                    <div class="menuSmall">
                         <img src="./img-obubble/cafes.png" alt="">
                         <img src="./img-obubble/thes.png" alt="">
                     </div>
+                    <div class="menuLarge">
+                        <img src="./img-obubble/chaudsDesktop.png" alt="">
+                    </div>
                 </div>
+
             </div>
 
 
@@ -149,45 +167,50 @@
                     <span>&#x25bc;</span>
                 </div>
                 <div class="manger-content closed">
-                    <div>
+                    <div class="menuSmall">
                         <img src="./img-obubble/bagels.png" alt="">
                         <img src="./img-obubble/empanadas.png" alt="">
                         <img src="./img-obubble/Pates.png" alt="">
                         <img src="./img-obubble/gateaux.png" alt="">
+                    </div>
+                    <div class="menuLarge">
+                        <img src="./img-obubble/mangerDesktop.png" alt="">
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- FOOTER -->
+    <!----------------  FOOTER ---------------->
+    <!-- <div id="footer"></div> -->
     <footer class="footer">
-            <!-- <a href="#header">
-                <span class="glyphicon glyphicon-chevron-up"></span>
-            </a> -->
-            <div class="container">
-                <div>
-                    <a href="https://www.facebook.com/obubble/">
-                        <img class="icon fb-logo" src="./img-obubble/fb_logo.png" alt="fb-logo"></a>
-                    <a href="https://www.instagram.com/obubble.paris/">
-                        <img class="icon" src="./img-obubble/ig_logo.png" alt="ig-logo"></a>
-                    <a
-                        href="https://www.tripadvisor.fr/Restaurant_Review-g187147-d3727252-Reviews-O_Bubble-Paris_Ile_de_France.html">
-                        <img class="icon" src="./img-obubble/tripadvisor_logo.png" alt="sc-logo"></a>
-                </div>
-    
-                <div class="opening_hours">
-                    <h3>Obubble, ouvert 7j/7</h3>
-                    <p>lun - sam : 12h30 - 19h00<br>
-                        dim : 13h30 - 19h00<br>
-                        Phone : <a class="phone" href="tel:+33 (0)9 83 59 03 86">+33 (0)9 83 59 93 86</a>
-                    </p>
-                </div>
+        <div class="container">
+            <div>
+                <a href="https://www.facebook.com/obubble/">
+                    <img class="icon fb-logo" src="./img-obubble/fb_logo.png" alt="fb-logo"></a>
+                <a href="https://www.instagram.com/obubble.paris/">
+                    <img class="icon" src="./img-obubble/ig_logo.png" alt="ig-logo"></a>
+                <a
+                    href="https://www.tripadvisor.fr/Restaurant_Review-g187147-d3727252-Reviews-O_Bubble-Paris_Ile_de_France.html">
+                    <img class="icon" src="./img-obubble/tripadvisor_logo.png" alt="sc-logo"></a>
             </div>
-        </footer>
 
-    <script src="./js/app.js">
-    </script>
+            <div class="opening_hours">
+                <h3>Obubble, ouvert 7j/7</h3>
+                <p class="horairesMobilesTablets">lun - sam : 12h30 - 19h00<br>
+                    dim : 13h30 - 19h00<br>
+                    Phone : <a class="phone" href="tel:+33 (0)9 83 59 03 86">+33 (0)9 83 59 93 86</a>
+                </p>
+                <p class="horairesDesktop">lun - sam : 12h30 - 19h00 | dim : 13h30 - 19h00<br>
+                    Phone : <a class="phone" href="tel:+33 (0)9 83 59 03 86">+33 (0)9 83 59 93 86</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/app.js"></script>
+    <script src="./js/responsiveMenuAndFindUs.js"></script>
+
+
 </body>
 
 </html>

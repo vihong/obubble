@@ -11,26 +11,21 @@
 
     <link rel="stylesheet" href="css/style-all.css">
     <link rel="stylesheet" href="css/style-nous-trouver.css">
-    <title>Obubble | Bubble Tea Shop</title>
+    <title>Obubble | Bubble Tea Montmartre</title>
     <link rel="icon" type="image/png" href="./img-obubble/logo-white-bgc-orange.png">
-
-
-    <style>
-        #myMap {
-            height: 400px;
-            width: 100%;
-        }
-    </style>
 </head>
 
 <body>
 
+    <div id="point" class="point"></div>
+
+    
     <!---------------- HEADER ---------------->
     <header class="header" id="header">
 
         <!-- NAV BAR -->
         <div class="header_bar">
-            <nav class="navbar navbar-inverse navbar-fixed-top">
+            <nav id="navbar" class="navbar navbar-inverse navbar-fixed-top">
                 <div class="container">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#monMenu">
@@ -111,7 +106,7 @@
                 nos <span>gâteaux</span>.
             </p>
         </div>
-        <div class="container">
+        <div class="container container-carousel">
             <div class="row">
                 <div id="my-slider" class="carousel slide" data-ride="carousel">
 
@@ -163,11 +158,9 @@
 
 
 
-    <!---------------- FOOTER ---------------->
+<!----------------  FOOTER ---------------->
+    <!-- <div id="footer"></div> -->
     <footer class="footer">
-        <!-- <a href="#header">
-                <span class="glyphicon glyphicon-chevron-up"></span>
-            </a> -->
         <div class="container">
             <div>
                 <a href="https://www.facebook.com/obubble/">
@@ -181,8 +174,11 @@
 
             <div class="opening_hours">
                 <h3>Obubble, ouvert 7j/7</h3>
-                <p>lun - sam : 12h30 - 19h00<br>
+                <p class="horairesMobilesTablets">lun - sam : 12h30 - 19h00<br>
                     dim : 13h30 - 19h00<br>
+                    Phone : <a class="phone" href="tel:+33 (0)9 83 59 03 86">+33 (0)9 83 59 93 86</a>
+                </p>
+                <p class="horairesDesktop">lun - sam : 12h30 - 19h00 | dim : 13h30 - 19h00<br>
                     Phone : <a class="phone" href="tel:+33 (0)9 83 59 03 86">+33 (0)9 83 59 93 86</a>
                 </p>
             </div>
@@ -190,6 +186,8 @@
     </footer>
 
     <script src="./js/googleMap.js"></script>
+    <script src="./js/responsiveMenuAndFindUs.js"></script>
+
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdT2Yo8o0kVw9_lpu9BzWClC53h3D4HHM&callback=initMap">
         </script>
