@@ -99,9 +99,6 @@ img {
 
 //---------------------  HEADER (1/2)  ---------------------//
 .header {
-  @include responsive(desktop){
-    width: 50%;
-  }
   .header_bar {
     .navbar,
     .navbar-inverse {
@@ -114,28 +111,27 @@ img {
         background-color: transparent; //rend la navar complètement transparente
         height: 12vh;
         padding-top: 20px;
-        position: fixed;
+        // position: fixed;
         // z-index: 1;
       }
-      .logo-obubble {
-        height: 30px;
-        width: auto;
-        padding: 0;
-        position: relative;
-        bottom: 5px;
-        @include responsive(iPad) {
-          height: 40px;
-          top: 7px;
+      .navbar-brand {
+        .logo-obubble {
+          height: 30px;
+          width: auto;
+          padding: 0;
+          position: relative;
+          bottom: 5px;
+          @include responsive(iPad) {
+            height: 40px;
+            top: 7px;
+          }
+          @include responsive(desktop) {
+            // border: 1px solid black;
+            height: 50px;
+          }
         }
         @include responsive(desktop) {
-          // border: 1px solid black;
-          height: 50px;
-          right: 100px;
-        }
-      }
-      @include ipadResp {
-        div ul {
-          font-size: 1.3em;
+          // border: 5px solid purple; background-color: lightgreen;
         }
       }
       #monMenu {
@@ -148,7 +144,6 @@ img {
         @include responsive(desktop) {
           padding-right: 0;
           padding-top: 5px;
-          right: -100px;
         }
         ul {
           li a {
@@ -156,17 +151,18 @@ img {
             color: #fff;
             @include responsive(desktop) {
               margin: auto 20px;
+              // color: green;
+              font-size: 1.3em;
             }
           }
           li a:hover {
-            color: #fff;
+            color: rgba(211, 211, 211, 0.8);
           }
         }
       }
     }
   }
 }
-
 
 //when activated, this id style below keeps the header non-sticky and
 //at the top providing you remove the navbar-fixed-top from the id="navbar".
@@ -182,7 +178,7 @@ img {
 //   }
 // }
 //but for some reason, this new id style above wouldn't apply, so I created the class
-// to be added right below (see responsive.js) with ".removeStickyFromHeader": 
+// to be added right below (see responsive.js) with ".removeStickyFromHeader":
 
 .removeStickyFromHeader {
   height: 10vh;
@@ -283,22 +279,4 @@ img {
   opacity: 1;
   transform: translateY(0);
   transition: 1.4s cubic-bezier(0.59, 0, 0.02, 0.99);
-}
-
-@include desktopResp {
-  .reveal-2 {
-    transition-delay: 0.15s;
-  }
-
-  .reveal-3 {
-    transition-delay: 0.2s;
-  }
-
-  .reveal-4 {
-    transition-delay: 0.3s;
-  }
-
-  .reveal-5 {
-    transition-delay: 0.4s;
-  }
 }

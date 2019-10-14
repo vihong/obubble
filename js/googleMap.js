@@ -5,7 +5,7 @@ function initMap() {
     
     //map options
     const options = {
-        zoom: 13,
+        zoom: 14,
         center: {lat: 48.883536, lng: 2.341302 } //Paris position
     }
     

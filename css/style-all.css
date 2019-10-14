@@ -4,7 +4,6 @@ html,
 body {
   margin: 0;
   padding: 0;
-  /* background-color: lightcoral; */
   font-family: "Nunito", sans-serif;
 }
 
@@ -23,21 +22,24 @@ img {
 }
 
 @media (min-width: 768px) {
-  .header .header_bar .navbar {
+  .header .header_bar .navbar,
+  .header .header_bar .navbar-inverse {
     border: none;
     height: 8vh;
   }
 }
 
-@media (min-width: 968px) {
-  .header .header_bar .navbar {
+@media (min-width: 960px) {
+  .header .header_bar .navbar,
+  .header .header_bar .navbar-inverse {
     background-color: transparent;
     height: 12vh;
     padding-top: 20px;
   }
 }
 
-.header .header_bar .navbar .logo-obubble {
+.header .header_bar .navbar .navbar-brand .logo-obubble,
+.header .header_bar .navbar-inverse .navbar-brand .logo-obubble {
   height: 30px;
   width: auto;
   padding: 0;
@@ -46,58 +48,68 @@ img {
 }
 
 @media (min-width: 768px) {
-  .header .header_bar .navbar .logo-obubble {
+  .header .header_bar .navbar .navbar-brand .logo-obubble,
+  .header .header_bar .navbar-inverse .navbar-brand .logo-obubble {
     height: 40px;
     top: 7px;
   }
 }
 
-@media (min-width: 968px) {
-  .header .header_bar .navbar .logo-obubble {
+@media (min-width: 960px) {
+  .header .header_bar .navbar .navbar-brand .logo-obubble,
+  .header .header_bar .navbar-inverse .navbar-brand .logo-obubble {
     height: 50px;
-    right: 100px;
   }
 }
 
-@media (min-width: 768px) {
-  .header .header_bar .navbar div ul {
-    font-size: 1.3em;
-  }
-}
-
-.header .header_bar .navbar .navbar-collapse {
+.header .header_bar .navbar #monMenu,
+.header .header_bar .navbar-inverse #monMenu {
   text-align: center;
 }
 
 @media (min-width: 768px) {
-  .header .header_bar .navbar .navbar-collapse {
+  .header .header_bar .navbar #monMenu,
+  .header .header_bar .navbar-inverse #monMenu {
     position: relative;
     top: 20px;
     padding-right: 20px;
   }
 }
 
-@media (min-width: 968px) {
-  .header .header_bar .navbar .navbar-collapse {
+@media (min-width: 960px) {
+  .header .header_bar .navbar #monMenu,
+  .header .header_bar .navbar-inverse #monMenu {
     padding-right: 0;
     padding-top: 5px;
-    right: -100px;
   }
 }
 
-.header .header_bar .navbar .navbar-collapse ul li a {
+.header .header_bar .navbar #monMenu ul li a,
+.header .header_bar .navbar-inverse #monMenu ul li a {
   font-size: 1.1em;
   color: #fff;
 }
 
-@media (min-width: 968px) {
-  .header .header_bar .navbar .navbar-collapse ul li a {
+@media (min-width: 960px) {
+  .header .header_bar .navbar #monMenu ul li a,
+  .header .header_bar .navbar-inverse #monMenu ul li a {
     margin: auto 20px;
+    font-size: 1.3em;
   }
 }
 
-.header .header_bar .navbar .navbar-collapse ul li a:hover {
-  color: #fff;
+.header .header_bar .navbar #monMenu ul li a:hover,
+.header .header_bar .navbar-inverse #monMenu ul li a:hover {
+  color: rgba(211, 211, 211, 0.8);
+}
+
+.removeStickyFromHeader {
+  height: 10vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
 
 .footer {
@@ -120,7 +132,7 @@ img {
   }
 }
 
-@media (min-width: 968px) {
+@media (min-width: 960px) {
   .footer .opening_hours h3 {
     font-size: 2.6rem;
   }
@@ -137,7 +149,7 @@ img {
   }
 }
 
-@media (min-width: 968px) {
+@media (min-width: 960px) {
   .footer .opening_hours p.horairesMobilesTablets {
     display: none;
   }
@@ -147,7 +159,7 @@ img {
   display: none;
 }
 
-@media (min-width: 968px) {
+@media (min-width: 960px) {
   .footer .opening_hours .horairesDesktop {
     display: block;
     font-size: 1.8rem;
@@ -173,7 +185,7 @@ img {
   }
 }
 
-@media (min-width: 968px) {
+@media (min-width: 960px) {
   .footer .icon {
     width: 5%;
     margin-left: 3em;
@@ -207,24 +219,5 @@ img {
           transform: translateY(0);
   -webkit-transition: 1.4s cubic-bezier(0.59, 0, 0.02, 0.99);
   transition: 1.4s cubic-bezier(0.59, 0, 0.02, 0.99);
-}
-
-@media (min-width: 1024px) {
-  .reveal-2 {
-    -webkit-transition-delay: 0.15s;
-            transition-delay: 0.15s;
-  }
-  .reveal-3 {
-    -webkit-transition-delay: 0.2s;
-            transition-delay: 0.2s;
-  }
-  .reveal-4 {
-    -webkit-transition-delay: 0.3s;
-            transition-delay: 0.3s;
-  }
-  .reveal-5 {
-    -webkit-transition-delay: 0.4s;
-            transition-delay: 0.4s;
-  }
 }
 /*# sourceMappingURL=style-all.css.map */

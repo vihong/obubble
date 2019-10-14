@@ -140,11 +140,10 @@ body {
 
 @media (min-width: 960px) {
   .header_text {
-    top: -25rem;
-    font-size: 1.5rem;
+    top: -18rem;
+    font-size: 1.2rem;
     text-align: left;
     position: relative;
-    right: 180px;
   }
 }
 
@@ -215,6 +214,15 @@ body {
     padding: 1.5rem;
     font-weight: bold;
   }
+}
+
+.header_text a:hover {
+  text-decoration: none;
+  border: 1px solid #6e5313;
+  color: #6e5313;
+  border-radius: 15px;
+  text-transform: uppercase;
+  margin-top: 10px;
 }
 
 .boxes {
