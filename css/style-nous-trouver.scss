@@ -96,8 +96,6 @@ body {
   }
   .metroLines {
     display: inline;
-    margin-right: 1em;
-    margin-left: 1em;
     @include responsive(iPad) {
       margin: 2em;
     }
@@ -106,7 +104,7 @@ body {
     }
     img {
       width: 6%;
-      margin: 1em;
+      margin-left: 1em;
       @include responsive(iPad) {
         width: 5%;
         position: relative;
