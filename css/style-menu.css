@@ -63,7 +63,7 @@ body {
   font-weight: 400;
   text-transform: uppercase;
   position: relative;
-  right: 5px;
+  right: 4px;
   color: #ffc001;
 }
 
@@ -87,6 +87,7 @@ body {
 #bubbleTea .title h1 {
   color: #5b98de;
   position: relative;
+  right: 2px;
 }
 
 @media (min-width: 768px) {
