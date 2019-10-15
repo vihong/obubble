@@ -62,13 +62,14 @@ body {
   font-size: 1.3em;
   font-weight: 400;
   text-transform: uppercase;
+  position: relative;
+  right: 5px;
   color: #ffc001;
 }
 
 @media (min-width: 960px) {
   #formules .title h1 {
     font-size: 1.8em;
-    position: relative;
     right: 7px;
   }
 }
@@ -86,7 +87,12 @@ body {
 #bubbleTea .title h1 {
   color: #5b98de;
   position: relative;
-  left: 10px;
+}
+
+@media (min-width: 768px) {
+  #bubbleTea .title h1 {
+    left: 10px;
+  }
 }
 
 #bubbleTea .title img {
@@ -150,7 +156,12 @@ body {
 #chauds .title h1 {
   color: #dd5353;
   position: relative;
-  left: 10px;
+}
+
+@media (min-width: 768px) {
+  #chauds .title h1 {
+    left: 10px;
+  }
 }
 
 #chauds .title img {

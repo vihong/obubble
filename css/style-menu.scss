@@ -93,7 +93,7 @@ body {
       @include responsive(iPad) {
         font-size: 1.5em;
       }
-      @include responsive(desktop){
+      @include responsive(desktop) {
         font-size: 2em;
         margin-top: auto;
       }
@@ -112,7 +112,6 @@ body {
       @include responsive(iPad) {
         font-size: 1.5em;
         right: 1.8em;
-        
       }
     }
   }
@@ -131,10 +130,11 @@ body {
     font-size: 1.3em;
     font-weight: 400;
     text-transform: uppercase;
+    position: relative;
+    right: 5px;
     color: #ffc001;
-    @include responsive(desktop){
+    @include responsive(desktop) {
       font-size: 1.8em;
-      position: relative;
       right: 7px;
     }
   }
@@ -150,7 +150,9 @@ body {
   h1 {
     color: #5b98de;
     position: relative;
-    left: 10px;
+    @include responsive(iPad) {
+      left: 10px;
+    }
   }
   img {
     width: 13%;
@@ -179,11 +181,10 @@ body {
     @include responsive(iphone6) {
       display: inline-block;
     }
-    @include responsive(iPad){
+    @include responsive(iPad) {
       position: relative;
       left: 10px;
     }
-    
   }
 
   img {
@@ -203,7 +204,9 @@ body {
   h1 {
     color: #dd5353;
     position: relative;
-    left: 10px;
+    @include responsive(iPad) {
+      left: 10px;
+    }
   }
   img {
     width: 13%;
@@ -222,7 +225,7 @@ body {
     color: #fead3a;
     position: relative;
     left: 1rem;
-    @include responsive(iPad){
+    @include responsive(iPad) {
       left: 20px;
     }
   }
