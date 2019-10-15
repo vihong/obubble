@@ -126,8 +126,7 @@ body {
   }
 }
 
-.itinaryAPI a:hover,
-.itinaryAPI a:focus {
+.itinaryAPI a:hover {
   font-size: 1em;
   border: 1px solid #c69521;
   color: #fff;
@@ -147,8 +146,7 @@ body {
 }
 
 @media (min-width: 768px) {
-  .itinaryAPI a:hover,
-  .itinaryAPI a:focus {
+  .itinaryAPI a:hover {
     font-size: 1.5em;
   }
 }
